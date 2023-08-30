@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block tittle %}
+    Detalle del producto
+    {# Aquí puedes listar los productos #}
+{% endblock %}
+
+{% block boton1 %}
+    <button class="btn-light">Ver Orden</button>
+{% endblock %}
+
+{% block boton2 %}
+    <button class="btn-light1">Salir</button>
+{% endblock %}
+
+{% block content %}
+    <div class="product-details">
+        <div class="product-image">
+            <img src="{{ asset(producto.imagen) }}" alt="{{ producto.nombre }}">
+        </div>
+        <div class="product-info">
+            <h2>{{ producto.nombre }}</h2>
+            <p>{{ producto.descripcion }}</p>
+            <p>Precio: ${{ producto.precio }}</p>
+            <a href="{{ path('listar_productos') }}" class="btn btn-dark">Volver</a>
+        </div>
+    </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
