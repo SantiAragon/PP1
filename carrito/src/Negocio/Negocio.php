@@ -8,28 +8,28 @@ class Almacen
     private $productos;
     public function __construct(){
         $this->productos=[
-        0 => [
+        1 => [
             'id' => 1,
             'nombre' => 'Coca cola',
             'descripcion' =>'Bebida',
             'precio' => 101,
             'imagen' => 'images/coca.png',
         ],
-        1 => [
+        2 => [
             'id' => 2,
             'nombre' => 'Fanta',
             'descripcion' => 'Bebida',
             'precio' => 102,
             'imagen' => 'images/fanta.png',
         ],
-        2 => [
+        3 => [
             'id' => 3,
             'nombre' => 'Lays',
             'descripcion' => 'Comida',
             'precio' => 103,
             'imagen' => 'images/lays.jpg',
         ],
-        3 => [
+        4 => [
             'id' => 4,
             'nombre' => 'Oreos',
             'descripcion' => 'Comida',

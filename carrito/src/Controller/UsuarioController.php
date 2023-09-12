@@ -5,13 +5,13 @@ use App\Negocio\Almacen;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\Producto;
+use App\Entity\Usuario;
 use Doctrine\Persistence\ManagerRegistry;
 
 class ProductoController extends AbstractController
 {
     /**
-     * @Route("/", name="listar_productos")
+     * @Route("/", name="app_login")
      */
     public function listarProductos(ManagerRegistry $registry): Response
     {
