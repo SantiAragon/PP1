@@ -1,0 +1,13 @@
+
+.categ-cont {
+    border: solid;
+    margin-top: 5rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5rem;
+    display: inline;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
