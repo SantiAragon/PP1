@@ -1,8 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 {% endblock %}
+{% block tittle %} Crear Cuenta {% endblock %}
 {% block content %} 
+      <div class="categoria">
          {% for categoria in categorias %}
                 <div class="categ-cont">
                 {% if categoria.id == 0 %}
@@ -53,9 +55,12 @@
                 </svg>
 
 
-              {% endif %} 
+              {% endif %}
+                <div class="informacion-categ">  
                 <h2>{{ categoria.nombre }}</h2>
                 <p>{{ categoria.descripcion }}</p>
+                </div>
             </div>
           {% endfor %}
+      </div>
 {% endblock %}
