@@ -20,4 +20,12 @@ class GestionController extends AbstractController
         $categoria= $info->findAll();
         return $this->render('registro.html.twig', ['categorias'=>$categoria,]);
     }
+
+    /**
+     * @Route("/", name="mostrarStock")
+     */
+    public function mostrarStock(Stock $stock) {
+        $categoria= $stock->mostrarStock();
+        return $this->render('stock.html.twig', ['categorias'=>$categoria,]);
+    }
 }
