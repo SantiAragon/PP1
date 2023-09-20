@@ -1,21 +1,82 @@
+body {
+    background-color: #EBEAEF; /* Color de fondo */
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar relleno por defecto */
+}
 
+.nav{
+    background-color: white;/* Color de fondo */
+   
+    height: 105px;/* Altura*/
+}
 .categoria {
-    margin-top: 15rem;
+    margin-top: 86px;/* Margen de altura con respecto al nav*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/* Dividimos la pantalla en 3 columna 1 fila*/
+    grid-gap: 94px;
+    padding-left: 41px;/* Margen izquierdo de separacion*/
 }
 
 .categ-cont {
-    width: 15rem;
-    height: 13rem;
-    border: solid;
-    border-radius: 30%;
-    border-width: thin;
-    margin-top: 0;
-    margin-right: 5rem;
-    margin-left: 5rem;
-    margin-bottom: 5rem;
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    text-align: center;
-    justify-content: space-evenly;
+    width: 325px;/*Ancho de los bloques*/
+    height: 333px;/* Alto de los bloques*/
+    border: solid;/* Borde solido*/
+    border-radius: 30px;/* Radio de 30 px*/
+    border-width: thin;/* Aplicamos un borde delgaddo*/
+    text-align: center;/* Aliniamos el texto al centro*/
+    background-color: white;/* Aplicamos un color de fondo blanco*/
 }
 
+.categ-cont svg{
+    margin-top: 30px;/* Aplicamos un margen superior de 30px a las imagenes svg*/
+}
+
+.texto-azul {
+    color: blue;/* Aplicamos  color al titulo*/
+    font-size: 38px; /* Tamaño de fuente de 38px */
+    font-weight: bold; /* Texto en negrita (bold) */
+    font-family: 'Murecho', sans-serif; /* Fuente 'Murecho' */
+}
+
+.texto-amarillo {
+    color: orange;/* Aplicamos  color al titulo*/
+    font-size: 38px; /* Tamaño de fuente de 38px */
+    font-weight: bold; /* Texto en negrita (bold) */
+    font-family: 'Murecho', sans-serif; /* Fuente 'Murecho' */
+}
+
+.texto-verde {
+    color: green;/* Aplicamos  color al titulo*/
+    font-size: 38px; /* Tamaño de fuente de 38px */
+    font-weight: bold; /* Texto en negrita (bold) */
+    font-family: 'Murecho', sans-serif; /* Fuente 'Murecho' */
+}
+
+.texto-gris {
+    color: gray;/* Aplicamos  color al titulo*/
+    font-size: 38px; /* Tamaño de fuente de 38px */
+    font-weight: bold; /* Texto en negrita (bold) */
+    font-family: 'Murecho', sans-serif; /* Fuente 'Murecho' */
+}
+
+.texto-negro {
+    color: black;/* Aplicamos  color al titulo*/
+    font-size: 38px; /* Tamaño de fuente de 38px */
+    font-weight: bold; /* Texto en negrita (bold) */
+    font-family: 'Murecho', sans-serif; /* Fuente 'Murecho' */
+}
+
+.texto-rojo {
+    color: red;/* Aplicamos  color al titulo*/
+    font-size: 38px; /* Tamaño de fuente de 38px */
+    font-weight: bold; /* Texto en negrita (bold) */
+    font-family: 'Murecho', sans-serif; /* Fuente 'Murecho' */
+}
+
+.descripcion-principal{
+    font-size: 30px; /* Tamaño de fuente de 30px */
+    font-weight: bold; /* Texto en negrita (bold) */
+    font-family: 'Mulish', sans-serif; /* Fuente 'Mulish' */
+    text-align: left;/* Alineado a la izquierda*/
+    padding-left: 10px;/* Separacion izquierda de 10px*/
+}
