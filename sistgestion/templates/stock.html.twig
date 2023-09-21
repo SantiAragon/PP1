@@ -2,9 +2,11 @@
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 {% endblock %}
-{% block tittle %} Filtrar {% endblock %}
 
 {% block content1 %} 
-{% for categoria in categorias %} 
-{% endfor %}
+ <div>
+ <nav>
+ {% for categoria in categorias %}
+ <h2> {{categoria.nombre}} </h2>
+ {% endfor %}
 {% endblock %}

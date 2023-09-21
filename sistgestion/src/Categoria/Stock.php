@@ -8,7 +8,7 @@ class Stock
     public function __construct()
     {
         $this->categorias();
-        }
+    }
 
         public function agregarStock($stock)
     {
@@ -19,4 +19,5 @@ class Stock
     {
         return $this->categorias;
     }
+
     }

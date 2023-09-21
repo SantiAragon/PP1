@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 use App\Categoria\Informacion;
+use App\Categoria\Stock;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -18,14 +19,14 @@ class GestionController extends AbstractController
      */
     public function listarCategorias(Informacion $info) {
         $categoria= $info->findAll();
-        return $this->render('registro.html.twig', ['categorias'=>$categoria,]);
+        return $this->render('registro.html.twig',['categorias'=>$categoria,]);
     }
 
     /**
      * @Route("/", name="mostrarStock")
      */
-    public function mostrarStock(Stock $stock) {
-        $categoria= $stock->mostrarStock();
+    public function mostrarStock(Informacion $info) {
+        $categoria= $info->mostrarStock();
         return $this->render('stock.html.twig', ['categorias'=>$categoria,]);
     }
 }

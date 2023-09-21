@@ -1,21 +1,80 @@
 
+body {
+    background-color: #EBEAEF; /* Color de fondo */
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar relleno por defecto */
+}
+
 .categoria {
-    margin-top: 15rem;
+    margin-top: 6rem;
 }
 
 .categ-cont {
-    width: 15rem;
-    height: 13rem;
+    width: 9rem;
+    height: 7.5rem;
     border: solid;
     border-radius: 30%;
     border-width: thin;
     margin-top: 0;
     margin-right: 5rem;
-    margin-left: 5rem;
-    margin-bottom: 5rem;
+    margin-left: 11rem;
+    margin-bottom: 4rem;
     font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
     text-align: center;
-    justify-content: space-evenly;
+    font-size: 0.7rem;
+    background-color: white;
 }
 
+a {
+    color: black;
+}
+
+.nombre-stock {
+   color: blue;
+}
+
+.nombre-info {
+    color: orange;
+}
+
+.nombre-edit {
+    color: green;
+}
+
+.nombre-hist {
+    color: grey;
+}
+
+.nombre-usuario {
+    color: black;
+}
+
+.nombre-agregar {
+    color: red;
+}
+
+.encabezado {
+    border-bottom: solid;
+    background-color: white;
+    padding: 2.2rem;
+    border-width: thin;
+}
+
+.imagen1 {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+}
+
+.icono1 {
+   position: absolute;
+   top: 0.7rem;
+   left: 65rem;
+}
+
+.icono2 {
+    position: absolute;
+    top: 0.01px;
+    left: 70rem;
+ }
