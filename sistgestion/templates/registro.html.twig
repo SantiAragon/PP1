@@ -2,6 +2,7 @@
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 {% endblock %}
+
 {% block content %}
       <div class="encabezado">
        <div class="imagen1">
@@ -34,6 +35,7 @@
           </div></a>
         </div>
       </div> 
+
       <div class="categoria">
          {% for categoria in categorias %}
                 <a href="templates/stock.html.twig"><div class="categ-cont"> 
@@ -63,16 +65,12 @@
               {% if categoria.id == 3 %}
                 <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_9_73)">
-                <g clip-path="url(#clip1_9_73)">
                 <path d="M50 87.5C40.4167 87.5 32.0653 84.3222 24.9458 77.9667C17.8264 71.6111 13.7472 63.6778 12.7083 54.1667H21.25C22.2222 61.3889 25.4347 67.3611 30.8875 72.0833C36.3403 76.8055 42.7111 79.1667 50 79.1667C58.125 79.1667 65.0181 76.3361 70.6792 70.675C76.3403 65.0139 79.1694 58.1222 79.1667 50C79.1667 41.875 76.3361 34.9819 70.675 29.3208C65.0139 23.6597 58.1222 20.8306 50 20.8333C45.2083 20.8333 40.7292 21.9444 36.5625 24.1667C32.3958 26.3889 28.8889 29.4444 26.0417 33.3333H37.5V41.6667H12.5V16.6667H20.8333V26.4583C24.375 22.0139 28.6986 18.5764 33.8042 16.1458C38.9097 13.7153 44.3083 12.5 50 12.5C55.2083 12.5 60.0875 13.4903 64.6375 15.4708C69.1875 17.4514 73.1458 20.1236 76.5125 23.4875C79.8792 26.8569 82.5528 30.8153 84.5333 35.3625C86.5139 39.9097 87.5028 44.7889 87.5 50C87.5 55.2083 86.5097 60.0875 84.5292 64.6375C82.5486 69.1875 79.8764 73.1458 76.5125 76.5125C73.1431 79.8792 69.1847 82.5528 64.6375 84.5333C60.0903 86.5139 55.2111 87.5028 50 87.5ZM61.6667 67.5L45.8333 51.6667V29.1667H54.1667V48.3333L67.5 61.6667L61.6667 67.5Z" fill="#808080"/>
                 </g>
                 </g>
                 <defs>
-                <clipPath id="clip0_9_73">
-                <rect width="100" height="100" fill="white"/>
-                </clipPath>
                 <clipPath id="clip1_9_73">
-                <rect width="100" height="100" fill="white"/>
+                <rect width="100px" height="100px" fill="white"/>
                 </clipPath>
                 </defs>
                 </svg>
@@ -96,9 +94,9 @@
                 <h2 class="nombre-agregar">{{ categoria.nombre }}</h2>
                 <p>{{ categoria.descripcion }}</p>
 
-              {% endif %}  
-                
-            </div></a>
+              {% endif %}                 
+            </div></a>     
           {% endfor %}
       </div>
+      
 {% endblock %}
