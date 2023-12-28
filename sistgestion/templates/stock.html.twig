@@ -1,12 +1,9 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('http://localhost/PP1/sistgestion/public/css/styles.css') }}">
 {% endblock %}
+ 
+ {% block body %}
+ <h2> Este es el id de stock {{ idStock }}
 
-{% block content1 %} 
- <div>
- <nav>
- {% for categoria in categorias %}
- <h2> {{categoria.nombre}} </h2>
  {% endfor %}
-{% endblock %}

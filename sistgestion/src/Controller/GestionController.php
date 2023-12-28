@@ -23,10 +23,9 @@ class GestionController extends AbstractController
     }
 
     /**
-     * @Route("/", name="mostrarStock")
+     * @Route("/mostrar-stock/{id}", name="mostrarStock")
      */
-    public function mostrarStock(Informacion $info) {
-        $categoria= $info->mostrarStock();
-        return $this->render('stock.html.twig', ['categorias'=>$categoria,]);
+    public function mostrarStock($id) {
+        return $this->render('templates/stock.html.twig', ['idStock' => $id,]);
     }
 }
