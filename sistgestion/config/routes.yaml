@@ -1,5 +1,10 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+home:
+    path: /
+    controller: App\Controller\GestionController::listarCategorias
+
+
+stockp:
+    path: /stockp
+    controller: App\Controller\StockController::mostrarStock
 
 
