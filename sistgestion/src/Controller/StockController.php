@@ -16,7 +16,7 @@ class StockController extends AbstractController
     /**
      * @Route("/stockp", name="stock_p")
      */
-    public function mostrarStock(): Response {
-        return $this->render('templates/stock.html.twig');
+    public function mostrarStock() {
+        return $this->render('stock.html.twig');
     }
 }

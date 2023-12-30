@@ -7,4 +7,3 @@ stockp:
     path: /stockp
     controller: App\Controller\StockController::mostrarStock
 
-
