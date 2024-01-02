@@ -14,7 +14,7 @@ use App\Entity\Producto;
 class GestionController extends AbstractController
 {
     /**
-     * @Route("/inicio", name="listarCategorias")
+     * @Route("/", name="listarCategorias")
      */
     public function listarCategorias(Informacion $info): Response {
         $categoria= $info->findAll();

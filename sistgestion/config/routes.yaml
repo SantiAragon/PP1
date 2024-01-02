@@ -1,5 +1,5 @@
 home:
-    path: /
+    path: /home
     controller: App\Controller\GestionController::listarCategorias
 
 

@@ -20,21 +20,11 @@ class Informacion
             ],
             3 => [
                 'id' => 2,
-                'nombre' => 'Editar',
-                'descripcion' => 'Editar informacion',
-            ],
-            4 => [
-                'id' => 3,
-                'nombre' => 'Historial',
-                'descripcion' => 'Visualizar historial',
-            ],
-            5 => [
-                'id' => 4,
                 'nombre' => 'Usuario',
                 'descripcion' => 'Editar perfil',
             ],
-            6 => [
-              'id' => 5,
+            4 => [
+              'id' => 3,
                 'nombre' => 'Agregar',
                 'descripcion' => 'Agregar un nuevo perfil',
             ]];
