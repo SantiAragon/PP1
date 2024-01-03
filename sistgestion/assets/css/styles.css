@@ -1,0 +1,122 @@
+body {
+    background-color: #EBEAEF; /* Color de fondo */
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar relleno por defecto */
+}
+
+
+.categoria {
+    margin-top: 9rem;
+    
+}
+
+.categ-cont {
+    width: 15rem;
+    height: 10rem;
+    border: solid;
+    border-radius: 30%;
+    border-width: thin;
+    margin-top: 0;
+    margin-right: 4.9rem;
+    margin-left: 27rem;
+    margin-bottom: 7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nombre-stock {
+   color: blue;
+}
+
+.nombre-info {
+    color: orange;
+}
+
+.nombre-edit {
+    color: green;
+}
+
+.nombre-hist {
+    color: grey;
+}
+
+.nombre-usuario {
+    color: black;
+}
+
+.nombre-agregar {
+    color: red;
+}
+
+.encabezado {
+    border-bottom: solid;
+    background-color: white;
+    padding: 3rem;
+    border-width: thin;
+}
+
+.imagen1 {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+}
+
+.icono1 {
+   position: absolute;
+   top: 0.7rem;
+   left: 90rem;
+}
+
+.icono2 {
+    position: absolute;
+    top: 1px;
+    left: 95rem;
+ }
+
+
+.filtrar-cont{
+    width: 105rem;
+    height: 18rem;
+    border: solid;
+    border-radius: 10%;
+    border-width: thin;
+    margin-top: 3rem;
+    margin-left: 7rem;
+    text-align: center;
+    
+}
+
+.filtrar-text{
+    position: absolute;
+    top: 9rem;
+    left: 50rem;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    margin-left: 3rem;
+    
+
+}
+
+.filtrar-img{
+    position: absolute;
+    top: 11.5rem;
+    left: 49rem;
+}
+
+.filtrar-menud{
+    position: absolute;
+    top: 20rem;
+    left: 32rem;
+    margin-left: 20rem;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 3rem;
+}

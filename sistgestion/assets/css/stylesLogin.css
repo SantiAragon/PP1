@@ -1,0 +1,84 @@
+body {
+    font-family: 'Mulish', sans-serif;
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar relleno por defecto */
+}
+
+.div-general{
+    display: flex;
+}
+
+.div-imagen {
+    flex: 1; /* Hace que div-imagen ocupe todo el espacio disponible */
+}
+
+.div-login {
+    flex: 1; /* Hace que div-login ocupe todo el espacio disponible */
+    text-align: center; /* Alinea el contenido al centro dentro de div-login */
+    position: relative; 
+}
+
+.div-login img {
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 298px; /* Posición en el eje x */
+    top: 53px; /* Posición en el eje y */
+}
+
+.titulo{
+    font-weight: 700; /* Negrita */
+    font-size: 36px; /* Tamaño de fuente de 36 píxeles */
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 110px; /* Posición en el eje x */
+    top: 169px; /* Posición en el eje y */
+}
+
+.email{
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 35px; /* Posición en el eje x */
+    top: 272px; /* Posición en el eje y */
+}
+
+.contraseña{
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 35px; /* Posición en el eje x */
+    top: 442px; /* Posición en el eje y */
+}
+
+.inputDatos{
+    
+    width: 552px;
+    height: 60px;
+   
+}
+
+.inputEmail{
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 20px; /* Posición en el eje x */
+    top: 347px; /* Posición en el eje y */
+    font-size: 28px;
+}
+
+.inputContraseña{
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 20px; /* Posición en el eje x */
+    top: 517px; /* Posición en el eje y */
+    font-size: 28px;
+}
+
+.botonIniciar{
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 171px; /* Posición en el eje x */
+    top: 637px; /* Posición en el eje y */
+    width: 250px;
+    height: 63px;
+    background-color: white;
+    border: 1px solid;
+    font-size: 28px;
+}
+
+.linkCrearCuenta{
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 48px; /* Posición en el eje x */
+    top: 829px; /* Posición en el eje y */
+    font-size: 20px;
+}
