@@ -81,8 +81,11 @@ body {
     left: 48px; /* Posición en el eje x */
     top: 829px; /* Posición en el eje y */
     font-size: 20px;
+<<<<<<< HEAD
 }
 
 .botonIniciar a {
     text-decoration: none;
+=======
+>>>>>>> a6c448736837d768bc24a06a89651a5be749943a
 }
