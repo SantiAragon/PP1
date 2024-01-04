@@ -1,0 +1,37 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/stylesLogin.css">
+{% endblock %}
+{% block content %}
+    <div class="div-general">
+        <div class="div-imagen" >
+            <img src="images/LoginImagen.png" >
+        </div>
+
+        <div class="div-login">
+
+            <img src="images/SanNicolas.png" >
+
+            <p class="titulo">
+                Bienvenido de vuelta
+            </p>
+
+            <p class="titulo email"> 
+                Email
+            </p>
+
+            <p class="titulo contraseña">
+                Contraseña
+            </p>
+
+            <input class="inputEmail inputDatos" type="email" id="emailInput" name="email" placeholder="Ingresa tu email">
+            <input class="inputContraseña inputDatos" type="password" id="passwordInput" name="password" placeholder="Ingresa tu contraseña">
+            
+            <button class="botonIniciar"><a href="{{ path('princ') }}">Iniciar sesión</a></button>
+
+            <p class="linkCrearCuenta">¿Todavia no tienes una cuenta? Crea una ahora</p>
+
+            </div>
+        </div>
+    
+    </div>
+{% endblock %}

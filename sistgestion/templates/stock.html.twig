@@ -10,7 +10,7 @@
 <body>
     <div class="encabezado">
        <div class="imagen1">
-         <a href="{{ path('home') }}"><img src="images/SanNicolas.png" width="250" height="50"></a>
+         <a href="{{ path('princ') }}"><img src="images/SanNicolas.png" width="250" height="50"></a>
           <a href=""><div class="icono1">
              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
              <g clip-path="url(#clip0_9_36)">
@@ -39,26 +39,34 @@
           </div></a>
         </div>
       </div>
-        <div class="filtrar-cont">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list-search filtrar-img" width="64" height="64" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-            <path d="M15 15m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-            <path d="M18.5 18.5l2.5 2.5" />
-            <path d="M4 6h16" />
-            <path d="M4 12h4" />
-            <path d="M4 18h4" />
-            </svg>
-            <p class="filtrar-text">Filtrar</p>
-            <div class="filtrar-menud">
-                <label for="filt-op"></label>
-                    <select name="filt-op" id="filt-op" height="50">
-                        <option value="Codigo"> Codigo </option>
-                        <option value="Linea"> Linea </option>
-                        <option value="Nombre"> Nombre </option>
-                        <option value="Cantidad"> Cantidad </option>
-                        <option value="Metros"> Metros </option>
-                </label>
-            </div>
-        </div>
+    <div class="img_stock">
+      <h2 class="stock_n_position nombre-stock"> Stock <h2>
+      <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M85.5833 21.7917L79.7917 14.7917C78.6667 13.375 76.9583 12.5 75 12.5H25C23.0417 12.5 21.3333 13.375 20.1667 14.7917L14.4167 21.7917C13.2083 23.2083 12.5 25.0833 12.5 27.0833V79.1667C12.5 83.75 16.25 87.5 20.8333 87.5H79.1667C83.75 87.5 87.5 83.75 87.5 79.1667V27.0833C87.5 25.0833 86.7917 23.2083 85.5833 21.7917ZM50 72.9167L27.0833 50H41.6667V41.6667H58.3333V50H72.9167L50 72.9167ZM21.3333 20.8333L24.7083 16.6667H74.7083L78.625 20.8333H21.3333Z" fill="#0000FF"/>
+        </svg>
+        
+    </div>
+    <div class="lista-stock">
+       <table>
+       <ul>
+            <li>Codigo</li>
+            <li>Codigo</li>
+        </ul>
+        </table>
+        <table>
+        <ul>
+            <li>Linea</li>
+        </ul>
+        </table>
+        <ul>
+            <li>Nombre</li>
+        </ul>
+        <ul>
+            <li>Cantidad</li>
+        </ul>
+        <ul>
+            <li>Metros</li>
+        </ul>
+    </div>
 </body>
 </html>

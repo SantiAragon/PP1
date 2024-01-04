@@ -1,9 +1,13 @@
-home:
-    path: /home
-    controller: App\Controller\GestionController::listarCategorias
+login:
+    path: /login
+    controller: App\Controller\LoginController::mostrarLogin
 
 
 stockp:
     path: /stockp
     controller: App\Controller\StockController::mostrarStock
+    
+princ:
+    path: /princ
+    controller: App\Controller\GestionController::listarCategorias    
 
