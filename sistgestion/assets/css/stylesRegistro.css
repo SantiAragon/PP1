@@ -3,7 +3,6 @@ body {
     margin: 0; /* Eliminar márgenes por defecto */
     padding: 0; /* Eliminar relleno por defecto */
 }
-
 .div-general{
     display: flex;
 }
@@ -12,36 +11,47 @@ body {
     flex: 1; /* Hace que div-imagen ocupe todo el espacio disponible */
 }
 
-.div-login {
+.div-registro {
     flex: 1; /* Hace que div-login ocupe todo el espacio disponible */
     text-align: center; /* Alinea el contenido al centro dentro de div-login */
     position: relative; 
 }
-
-.div-login img {
+.div-registro img {
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 298px; /* Posición en el eje x */
-    top: 53px; /* Posición en el eje y */
+    left: 594px; /* Posición en el eje x */
+    top: 57px; /* Posición en el eje y */
 }
 
 .titulo{
     font-weight: 700; /* Negrita */
     font-size: 36px; /* Tamaño de fuente de 36 píxeles */
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 110px; /* Posición en el eje x */
+    left: 344px; /* Posición en el eje x */
     top: 169px; /* Posición en el eje y */
+}
+
+.nombre{
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 190px; /* Posición en el eje x */
+    top: 277px; /* Posición en el eje y */
+}
+
+.apellido{
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 190px; /* Posición en el eje x */
+    top: 390px; /* Posición en el eje y */
 }
 
 .email{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 35px; /* Posición en el eje x */
-    top: 272px; /* Posición en el eje y */
+    left: 190px; /* Posición en el eje x */
+    top: 510px; /* Posición en el eje y */
 }
 
 .contraseña{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 35px; /* Posición en el eje x */
-    top: 442px; /* Posición en el eje y */
+    left: 190px; /* Posición en el eje x */
+    top: 628px; /* Posición en el eje y */
 }
 
 .inputDatos{
@@ -51,39 +61,41 @@ body {
    
 }
 
+.inputNombre{
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 175px; /* Posición en el eje x */
+    top: 353px; /* Posición en el eje y */
+    font-size: 28px;
+}
+
+.inputApellido{
+    position: absolute; /* Establece la posición absoluta en la imagen */
+    left: 175px; /* Posición en el eje x */
+    top: 466px; /* Posición en el eje y */
+    font-size: 28px;
+}
+
 .inputEmail{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 20px; /* Posición en el eje x */
-    top: 347px; /* Posición en el eje y */
+    left: 175px; /* Posición en el eje x */
+    top: 586px; /* Posición en el eje y */
     font-size: 28px;
 }
 
 .inputContraseña{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 20px; /* Posición en el eje x */
-    top: 517px; /* Posición en el eje y */
+    left: 175px; /* Posición en el eje x */
+    top: 704px; /* Posición en el eje y */
     font-size: 28px;
 }
 
-.botonIniciar{
+.botonCrear{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 171px; /* Posición en el eje x */
-    top: 637px; /* Posición en el eje y */
+    left: 344px; /* Posición en el eje x */
+    top: 844px; /* Posición en el eje y */
     width: 250px;
     height: 63px;
     background-color: white;
     border: 1px solid;
     font-size: 28px;
-}
-
-.linkCrearCuenta{
-    position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 48px; /* Posición en el eje x */
-    top: 829px; /* Posición en el eje y */
-    font-size: 20px;
-
-}
-
-.botonIniciar a {
-    text-decoration: none;
 }
