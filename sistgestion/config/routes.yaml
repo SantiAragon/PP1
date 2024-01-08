@@ -1,5 +1,5 @@
 login:
-    path: /login
+    path: /
     controller: App\Controller\LoginController::mostrarLogin
 
 
@@ -10,4 +10,8 @@ stockp:
 princ:
     path: /princ
     controller: App\Controller\GestionController::listarCategorias    
+
+registro:
+    path: /registro
+    controller: App\Controller\RegistroController::mostrarRegistro
 

@@ -99,3 +99,13 @@ body {
     border: 1px solid;
     font-size: 28px;
 }
+
+a {
+    text-decoration: none;
+}
+
+.flecha-volver {
+    position: absolute;
+    right: 110rem;
+    top: 2rem;
+}
