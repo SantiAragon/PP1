@@ -18,6 +18,6 @@ class GestionController extends AbstractController
      */
     public function listarCategorias(Informacion $info): Response {
         $categoria= $info->findAll();
-        return $this->render('registro.html.twig',['categorias'=>$categoria,]);
+        return $this->render('principal.html.twig',['categorias'=>$categoria,]);
     }
 }
