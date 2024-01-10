@@ -2,8 +2,8 @@
 {% block stylesheets %}
     <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/styles.css">
 {% endblock %}
-
 {% block content %}
+  {% block header %}
       <div class="encabezado">
        <div class="imagen1">
          <img src="images/SanNicolas.png" width="250" height="50">
@@ -35,7 +35,7 @@
           </div>
         </div>
       </div> 
-
+ {% endblock %}
       <div class="categoria">
          {% for categoria in categorias %}
               <a href="{{ path('stockp') }}"> 
