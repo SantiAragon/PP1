@@ -1,24 +1,29 @@
 {% block stylesheets %}
+     <!-- Enlace a la hoja de estilos personalizada -->
     <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/stylesRegistro.css">
 {% endblock %}
 {% block content %}
     <div class="div-general">
+        <!-- Div para la imagen -->
         <div class="div-imagen" >
             <img src="images/telefono-movil.png" >
         </div>
-
+         <!-- Div para el formulario de registro -->
         <div class="div-registro">
-
+             <!-- Logo y enlace para volver a la página de inicio de sesión -->
             <img src="images/SanNicolas.png" >
-            <a href="{{ path('login') }}"><div class="flecha-volver">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="72" height="72" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <a href="{{ path('login') }}">
+                <!-- Flecha de retroceso -->
+                <div class="flecha-volver">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="72" height="72" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M5 12l14 0" />
                     <path d="M5 12l6 6" />
                     <path d="M5 12l6 -6" />
-                </svg>
-            </div></a>
-
+                    </svg>
+                </div>
+            </a>
+            <!-- Títulos y campos del formulario -->
             <p class="titulo">
                Crear Cuenta
             </p>
@@ -38,12 +43,12 @@
             <p class="titulo contraseña">
                 Contraseña
             </p>
-
+            <!-- Campos de entrada del formulario -->
             <input class="inputEmail inputDatos" type="email" id="emailInput" name="email" placeholder="Ingresa tu email">
             <input class="inputContraseña inputDatos" type="password" id="passwordInput" name="password" placeholder="Ingresa tu contraseña">
             <input class="inputNombre inputDatos" type="text" id="nombreInput" name="nombre" placeholder="Ingresa tu nombre">
             <input class="inputApellido inputDatos" type="text" id="apellidoInput" name="apellido" placeholder="Ingresa tu apellido">
-            
+             <!-- Botón para crear la cuenta con enlace -->
             <button class="botonCrear"><a href="{{ path('princ') }}">Crear Cuenta</a></button>
         </div>
     

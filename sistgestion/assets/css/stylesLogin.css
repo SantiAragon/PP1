@@ -1,29 +1,30 @@
+/* Estilo global para el cuerpo del documento */
 body {
     font-family: 'Mulish', sans-serif;
     margin: 0; /* Eliminar márgenes por defecto */
     padding: 0; /* Eliminar relleno por defecto */
 }
-
+/* Estilos para el contenedor principal */
 .div-general{
     display: flex;
 }
-
+/* Estilos para el div que contiene la imagen en la parte izquierda */
 .div-imagen {
     flex: 1; /* Hace que div-imagen ocupe todo el espacio disponible */
 }
-
+/* Estilos para el div que contiene el formulario de inicio de sesión en la parte derecha */
 .div-login {
     flex: 1; /* Hace que div-login ocupe todo el espacio disponible */
     text-align: center; /* Alinea el contenido al centro dentro de div-login */
     position: relative; 
 }
-
+/* Estilos para la imagen dentro de div-login */
 .div-login img {
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 298px; /* Posición en el eje x */
     top: 53px; /* Posición en el eje y */
 }
-
+/* Estilos para el título del formulario */
 .titulo{
     font-weight: 700; /* Negrita */
     font-size: 36px; /* Tamaño de fuente de 36 píxeles */
@@ -31,26 +32,25 @@ body {
     left: 110px; /* Posición en el eje x */
     top: 169px; /* Posición en el eje y */
 }
-
+/* Estilos para el título del campo de correo electrónico */
 .email{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 35px; /* Posición en el eje x */
     top: 272px; /* Posición en el eje y */
 }
-
+/* Estilos para el título del campo de contraseña */
 .contraseña{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 35px; /* Posición en el eje x */
     top: 442px; /* Posición en el eje y */
 }
-
-.inputDatos{
-    
+/* Estilos generales para los campos de entrada */
+.inputDatos{ 
     width: 552px;
     height: 60px;
-   
 }
 
+/* Estilos específicos para el campo de correo electrónico */
 .inputEmail{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 20px; /* Posición en el eje x */
@@ -58,6 +58,7 @@ body {
     font-size: 28px;
 }
 
+/* Estilos específicos para el campo de contraseña */
 .inputContraseña{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 20px; /* Posición en el eje x */
@@ -65,6 +66,7 @@ body {
     font-size: 28px;
 }
 
+/* Estilos para el botón de iniciar sesión */
 .botonIniciar{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 171px; /* Posición en el eje x */
@@ -75,7 +77,7 @@ body {
     border: 1px solid;
     font-size: 28px;
 }
-
+/* Estilos para el enlace "¿Todavía no tienes una cuenta? Crea una ahora" */
 .linkCrearCuenta{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 48px; /* Posición en el eje x */
@@ -83,7 +85,7 @@ body {
     font-size: 20px;
 
 }
-
+/* Estilos para el enlace "¿Todavía no tienes una cuenta? Crea una ahora" */
 .botonIniciar a {
     text-decoration: none;
 }
