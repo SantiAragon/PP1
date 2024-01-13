@@ -1,0 +1,11 @@
+{% extends 'principal.html.twig' %}
+{% block stylesheets %}
+    <!-- Enlace a la hoja de estilos personalizada para el formulario de inicio de sesión -->
+    <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/stylesAgregar.css">
+{% endblock %}
+{% block content %}
+  {% block header %}
+    {# Tu contenido adicional para el bloque header #}
+    {{ parent() }} {# Esto incluirá el contenido original del bloque header de principal.twig #}
+ {% endblock %}
+{% endblock %}

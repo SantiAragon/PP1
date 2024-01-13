@@ -15,3 +15,10 @@ registro:
     path: /registro
     controller: App\Controller\RegistroController::mostrarRegistro
 
+agregar:
+    path: /agregar
+    controller: App\Controller\AgregarController::mostrarAgregar
+
+usuario:
+    path: /usuario
+    controller: App\Controller\UsuarioController::mostrarUsuario
