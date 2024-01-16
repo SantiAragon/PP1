@@ -144,3 +144,143 @@ a {
     left: 5rem;
     list-style: none;
 }
+/* ================================================================================================================ */
+/* Espacio correspondiente al HTML Agregar */
+/* Modificaciones comunes entre las opciones */
+.imgroup{
+    position: absolute;
+    top: 203px;
+    left: 112px;
+    width: 55px;
+    height: 55px;
+}
+.pgroup{
+    position: absolute;
+    top: 175px;
+    left: 188px;
+    font-weight: bold;
+    font-size: 38px;
+    font-family: 'murecho', sans-serif; /* Reemplaza 'murecho' con el nombre de tu fuente si es diferente */
+    color: red;
+}
+.imgformkit{
+    position: absolute;
+    top: 334px;
+    left: 152px;
+}
+.pformAgregar{
+    font-weight: bold;
+    font-size: 28px;
+    font-family: 'murecho', sans-serif; /* Reemplaza 'murecho' con el nombre de tu fuente si es diferente */
+}
+/* Modificaciones correspondientes al las opciones de codigo */
+.pCodigo{
+    position: absolute;
+    top: 310px;
+    left: 209px;
+}
+.inputCodigo{
+    position: absolute;
+    top: 330px;
+    left: 349px;
+}
+.inputDatos{
+    width: 430px;
+    height: 42px;
+    font-size: 28px;
+}
+/* Fondo blanco para el body*/
+.fondo-blanco{
+    background-color: white;
+}
+/* Modificaciones correspondientes al las opciones de linea */
+.imgLinea{
+    position: absolute;
+    top: 404px;
+    left: 152px;
+}
+.pLinea{
+    position: absolute;
+    top: 380px;
+    left: 209px;
+}
+.inputLinea{
+    position: absolute;
+    top: 400px;
+    left: 349px;
+}
+/* Modificaciones correspondientes al las opciones de nombre*/
+.imgNombre{
+    position: absolute;
+    top: 478px;
+    left: 152px;
+}
+.pNombre{
+    position: absolute;
+    top: 454px;
+    left: 209px;
+}
+.inputNombre{
+    position: absolute;
+    top: 474px;
+    left: 349px;
+}
+/* Modificaciones correspondientes al las opciones de cantidad */
+.imgCantidad{
+    position: absolute;
+    top: 548px;
+    left: 152px;
+}
+.pCantidad{
+    position: absolute;
+    top: 524px;
+    left: 209px;
+}
+.inputCantidad{
+    position: absolute;
+    top: 544px;
+    left: 349px;
+}
+/* Modificaciones correspondientes al las opciones de metro */
+.imgMetro{
+    position: absolute;
+    top: 618px;
+    left: 152px;
+}
+.pMetro{
+    position: absolute;
+    top: 597px;
+    left: 209px;
+}
+.inputMetro{
+    position: absolute;
+    top: 614px;
+    left: 349px;
+}
+/* Modificaciones correspondientes al la opciones de foto */
+.imgfoto{
+    position: absolute;
+    top: 683px;
+    left: 152px;
+}
+.pfoto{
+    position: absolute;
+    top: 662px;
+    left: 209px;
+}
+/* Modificaciones correspondientes al boton agregar */
+.botonGuardar{
+    width: 176px;
+    height: 36px;
+    background-color: #2A49FF;
+    color: white;
+    font-size: 28px;
+    border-radius: 5px;
+    position: absolute;
+    top: 768px;
+    left: 349px;
+}
+
+/* Fin del espacio correspondiente al HTML Agregar */
+/* ================================================================================================================ */
+

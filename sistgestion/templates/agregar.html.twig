@@ -1,11 +1,42 @@
 {% extends 'principal.html.twig' %}
 {% block stylesheets %}
     <!-- Enlace a la hoja de estilos personalizada para el formulario de inicio de sesión -->
-    <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/stylesAgregar.css">
+    <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/styles.css">
 {% endblock %}
 {% block content %}
   {% block header %}
     {# Tu contenido adicional para el bloque header #}
     {{ parent() }} {# Esto incluirá el contenido original del bloque header de principal.twig #}
  {% endblock %}
+ <body class="fondo-blanco">
+  <img class="imgroup" src="images/Group.png" >
+    <p class="pgroup">Agregar</p>
+    
+    <div class="formAgregar">
+      <img class="imgformkit" src="images/formkit_add.png" >
+      <p class="pformAgregar pCodigo">Codigo:</p>
+      <input class="inputCodigo inputDatos" type="text" id="codigoInput" name="nombre" placeholder="Ingresa el numero del codigo">
+   
+      <img class="imgformkit imgLinea" src="images/formkit_add.png" >
+      <p class="pformAgregar pLinea">Linea:</p>
+      <input class="inputLinea inputDatos" type="text" id="codigoInput" name="nombre" placeholder="Ingresa la linea">
+    
+      <img class="imgformkit imgNombre" src="images/formkit_add.png" >
+      <p class="pformAgregar pNombre">Nombre:</p>
+      <input class="inputNombre inputDatos" type="text" id="codigoInput" name="nombre" placeholder="Ingresa el nombre">
+
+      <img class="imgformkit imgCantidad" src="images/formkit_add.png" >
+      <p class="pformAgregar pCantidad">Cantidad:</p>
+      <input class="inputCantidad inputDatos" type="text" id="codigoInput" name="nombre" placeholder="Ingrese la cantidad">
+
+      <img class="imgformkit imgMetro" src="images/formkit_add.png" >
+      <p class="pformAgregar pMetro">Metros:</p>
+      <input class="inputMetro inputDatos" type="text" id="codigoInput" name="nombre" placeholder="Ingrese los metros">
+    
+      <img class="imgformkit imgfoto" src="images/fotoimagen.png" >
+      <p class="pformAgregar pfoto">Metros:</p>
+      
+      <button class="botonGuardar">Guardar</button>
+    </div>
+</body>
 {% endblock %}
