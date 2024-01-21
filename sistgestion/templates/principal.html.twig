@@ -10,7 +10,7 @@
               <img src="images/SanNicolas.png" width="250" height="50">
             
             </a>
-            <a href="">
+            <a href="{{ path('usuario') }}">
             <div class="icono1">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_9_36)">
@@ -44,8 +44,9 @@
       <div class="categoria">
          {% for categoria in categorias %}
               <a href="{{ path('stockp') }}"> 
-                <div class="categ-cont"> 
-                {% if categoria.id == 0 %}
+                <div class="categ-cont">
+               {% if categoria.id == 0 %}
+               <img src="images/stock1.png" width="286" height="280">
                 <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M85.5833 21.7917L79.7917 14.7917C78.6667 13.375 76.9583 12.5 75 12.5H25C23.0417 12.5 21.3333 13.375 20.1667 14.7917L14.4167 21.7917C13.2083 23.2083 12.5 25.0833 12.5 27.0833V79.1667C12.5 83.75 16.25 87.5 20.8333 87.5H79.1667C83.75 87.5 87.5 83.75 87.5 79.1667V27.0833C87.5 25.0833 86.7917 23.2083 85.5833 21.7917ZM50 72.9167L27.0833 50H41.6667V41.6667H58.3333V50H72.9167L50 72.9167ZM21.3333 20.8333L24.7083 16.6667H74.7083L78.625 20.8333H21.3333Z" fill="#0000FF"/>
                 </svg>
@@ -55,6 +56,7 @@
               </a> 
               <a href="">
               {% if categoria.id == 1 %}
+              <img src="images/informacion.png" width="286" height="280">
                 <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M54.1667 20.8333H87.5M54.1667 37.5H75M54.1667 62.5H87.5M54.1667 79.1666H75M12.5 20.8333C12.5 19.7282 12.939 18.6684 13.7204 17.887C14.5018 17.1056 15.5616 16.6666 16.6667 16.6666H33.3333C34.4384 16.6666 35.4982 17.1056 36.2796 17.887C37.061 18.6684 37.5 19.7282 37.5 20.8333V37.5C37.5 38.605 37.061 39.6648 36.2796 40.4462C35.4982 41.2276 34.4384 41.6666 33.3333 41.6666H16.6667C15.5616 41.6666 14.5018 41.2276 13.7204 40.4462C12.939 39.6648 12.5 38.605 12.5 37.5V20.8333ZM12.5 62.5C12.5 61.3949 12.939 60.3351 13.7204 59.5537C14.5018 58.7723 15.5616 58.3333 16.6667 58.3333H33.3333C34.4384 58.3333 35.4982 58.7723 36.2796 59.5537C37.061 60.3351 37.5 61.3949 37.5 62.5V79.1666C37.5 80.2717 37.061 81.3315 36.2796 82.1129C35.4982 82.8943 34.4384 83.3333 33.3333 83.3333H16.6667C15.5616 83.3333 14.5018 82.8943 13.7204 82.1129C12.939 81.3315 12.5 80.2717 12.5 79.1666V62.5Z" stroke="#FFA500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -93,7 +95,6 @@
                 <p>{{ categoria.descripcion }}</p>
               {% endif %}
               </a>
-              #}
               <a href="{{ path('usuario') }}">
               {% if categoria.id == 2 %}
                 <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,8 +105,10 @@
 
               {% endif %}
               </a>
+              #}
               <a href="{{ path('agregar') }}">
-              {% if categoria.id == 3 %}
+              {% if categoria.id == 2 %}
+               <img src="images/agregar.png" width="286" height="280">
                 <svg width="40" height="50" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M70.75 2H8.25C4.79822 2 2 4.79822 2 8.25V70.75C2 74.2018 4.79822 77 8.25 77H70.75C74.2018 77 77 74.2018 77 70.75V8.25C77 4.79822 74.2018 2 70.75 2Z" stroke="#FF0000" stroke-width="4" stroke-linejoin="round"/>
                 <path d="M39.5 22.8333V56.1666M22.8333 39.5H56.1666" stroke="#FF0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>

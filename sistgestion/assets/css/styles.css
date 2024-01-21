@@ -12,20 +12,27 @@ body {
 }
 
 .categ-cont {
-    width: 15rem;
-    height: 10rem;
+    width: 18rem;
+    height: 28rem;
     border: solid;
-    border-radius: 30%;
+    border-radius: 10%;
     border-width: thin;
-    margin-top: 0;
+    margin-top: 3rem;
     margin-right: 4.9rem;
-    margin-left: 27rem;
+    margin-left: 14rem;
     margin-bottom: 7rem;
     font-family: Arial, Helvetica, sans-serif;
     display: inline-block;
     text-align: center;
     font-size: 1rem;
     background-color: white;
+}
+
+.categ-cont img{
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border: solid;
+    border-width: thin;
 }
 
 a {
@@ -40,22 +47,32 @@ a {
 
 .nombre-info {
     color: orange;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .nombre-edit {
     color: green;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .nombre-hist {
     color: grey;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .nombre-usuario {
     color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .nombre-agregar {
     color: red;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .encabezado {
