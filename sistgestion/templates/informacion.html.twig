@@ -1,0 +1,36 @@
+{% extends 'principal.html.twig' %}
+{% block stylesheets %}
+    <!-- Enlace a la hoja de estilos personalizada para el formulario de inicio de sesión -->
+    <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/styles.css">
+{% endblock %}
+{% block content %}
+  {% block header %}
+    {# Tu contenido adicional para el bloque header #}
+    {{ parent() }} {# Esto incluirá el contenido original del bloque header de principal.twig #}
+ {% endblock %}
+ <body class="fondo-blanco">
+ 
+    {# Formulario de búsqueda #}
+    {{ form_start(form) }}
+    {{ form_widget(form.termino_busqueda, { 'label': false, 'attr': {'class': 'form-control-busqueda'} }) }} {# Aplicar la clase CSS personalizada #}
+    <button class="img-buscador-informacion" type="submit"><img  src="images/Vector.png" ></button>
+
+     
+    {{ form_end(form) }}
+
+   
+
+    {# Resultados de la búsqueda #}
+    {% if perfiles is not empty %}
+        
+        {% for perfil in perfiles %}
+            <p class="p-informacion p-codigo">Codigo: {{ perfil.codigo }}</p>
+            <p class="p-informacion p-nombre">Nombre: {{ perfil.nombre }}</p>
+            <p class="p-informacion p-linea">Linea: {{ perfil.linea }}</p>
+            <p class="p-informacion p-cantidad">Cantidad: {{ perfil.cantidad }}</p>
+            <p class="p-informacion p-metros">Metros: {{ perfil.metros }}</p>
+        {% endfor %}
+    {% else %}
+        <p>No se encontraron resultados.</p>
+    {% endif %}
+{% endblock %}
