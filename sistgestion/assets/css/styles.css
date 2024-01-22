@@ -369,4 +369,55 @@ a {
 
 /* Fin del espacio correspondiente al HTML Agregar */
 /* ================================================================================================================ */
+/* ================================================================================================================ */
+/* Espacio correspondiente al HTML Informacion */
+.form-control-busqueda{
+    position: absolute;
+    top: 236px;
+    left: 453px;
+    width: 498px;
+    height:53px;
+    border-radius:30px;
+}
+.img-buscador-informacion{
+    position: absolute;
+    top: 238px;
+    left: 901px;
+    height:54px;
+    background:none;
+    border: none;
+}
+
+.p-informacion{
+     font-weight: bold;
+     font-size: 28px;
+     font-family: 'murecho', sans-serif; /* Reemplaza 'murecho' con el nombre de la fuente que estás utilizando o desea usar */
+}
+
+.p-codigo{
+    position: absolute;
+    top: 447px;
+    left: 372px;
+
+}
+.p-nombre{
+    position: absolute;
+    top: 501px;
+    left: 372px;
+}
+.p-linea{
+    position: absolute;
+    top: 542px;
+    left: 372px;
+}
+.p-cantidad{
+    position: absolute;
+    top: 583px;
+    left: 372px; 
+}
+.p-metros{
+    position: absolute;
+    top: 624px;
+    left: 372px;
+}
 
