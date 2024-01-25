@@ -22,3 +22,7 @@ agregar:
 usuario:
     path: /usuario
     controller: App\Controller\UsuarioController::mostrarUsuario
+
+informacion:
+    path: /informacion
+    controller: App\Controller\InformacionController::mostrarPerfiles

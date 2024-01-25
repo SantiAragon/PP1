@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class InformacionController extends AbstractController
 {
     /**
-     * @Route("/Informacion", name="informacion_p")
+     * @Route("/informacion", name="informacion_p")
      */
     public function mostrarPerfiles(Request $request): Response
     {

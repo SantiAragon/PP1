@@ -16,6 +16,18 @@ class Perfil
     #[ORM\Column(length: 255)]
     private ?string $nombre = null;
 
+    #[ORM\Column]
+    private ?int $codigo = null;
+
+    #[ORM\Column(length: 50)]
+    private ?string $linea = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?int $cantidad = null;
+
+    #[ORM\Column]
+    private ?int $metros = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -29,6 +41,54 @@ class Perfil
     public function setNombre(string $nombre): static
     {
         $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    public function getCodigo(): ?int
+    {
+        return $this->codigo;
+    }
+
+    public function setCodigo(int $codigo): static
+    {
+        $this->codigo = $codigo;
+
+        return $this;
+    }
+
+    public function getLinea(): ?string
+    {
+        return $this->linea;
+    }
+
+    public function setLinea(string $linea): static
+    {
+        $this->linea = $linea;
+
+        return $this;
+    }
+
+    public function getCantidad(): ?int
+    {
+        return $this->cantidad;
+    }
+
+    public function setCantidad(?int $cantidad): static
+    {
+        $this->cantidad = $cantidad;
+
+        return $this;
+    }
+
+    public function getMetros(): ?int
+    {
+        return $this->metros;
+    }
+
+    public function setMetros(int $metros): static
+    {
+        $this->metros = $metros;
 
         return $this;
     }
