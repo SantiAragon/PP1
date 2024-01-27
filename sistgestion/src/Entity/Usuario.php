@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\UsuarioRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: UsuarioRepository::class)]
 class Usuario
@@ -14,15 +15,24 @@ class Usuario
     private ?int $id = null;
 
     #[ORM\Column(length: 50)]
+    #[Assert\NotBlank]
+    #[Assert\Length(max: 50)]
     private ?string $nombre = null;
 
     #[ORM\Column(length: 20)]
-    private ?string $contraseña = null;
+    #[Assert\NotBlank]
+    #[Assert\Length(max: 20)]
+    private ?string $password = null;
 
     #[ORM\Column(length: 50)]
+    #[Assert\NotBlank]
+    #[Assert\Email]
+    #[Assert\Length(max: 50)]
     private ?string $email = null;
 
     #[ORM\Column(length: 50)]
+    #[Assert\NotBlank]
+    #[Assert\Length(max: 50)]
     private ?string $apellido = null;
 
     public function getId(): ?int
@@ -42,14 +52,14 @@ class Usuario
         return $this;
     }
 
-    public function getContraseña(): ?string
+    public function getPassword(): ?string
     {
-        return $this->contraseña;
+        return $this->password;
     }
 
-    public function setContraseña(string $contraseña): static
+    public function setPassword(string $password): static
     {
-        $this->contraseña = $contraseña;
+        $this->password = $password;
 
         return $this;
     }
