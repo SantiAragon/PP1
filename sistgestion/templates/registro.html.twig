@@ -32,11 +32,11 @@
                 {{ form_start(form) }}
                 <div class="titulo nombre">
                     {{ form_label(form.nombre) }}
-                    {{ form_widget(form.nombre, {'attr': {'class': 'inputNombre inputDatos'}}) }}
+                    {{ form_widget(form.nombre, {'attr': {'class': 'inputNombre inputDatos','placeholder': 'Ingresa tu nombre'}}) }}
                 </div>
                 <div class="titulo apellido">
                     {{ form_label(form.apellido) }}
-                    {{ form_widget(form.apellido, {'attr': {'class': 'inputApellido inputDatos'}}) }}
+                    {{ form_widget(form.apellido, {'attr': {'class': 'inputApellido inputDatos', 'placeholder': 'Ingresa tu apellido'}}) }}
                 </div>
                 <div class="titulo email">
                     {{ form_label(form.email) }}

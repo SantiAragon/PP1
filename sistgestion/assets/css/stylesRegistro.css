@@ -36,14 +36,16 @@ body {
 .nombre{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 190px; /* Posición en el eje x */
-    top: 277px; /* Posición en el eje y */
+    top: 290px; /* Posición en el eje y */
 }
+
 /* Estilos para el campo de apellido */
 .apellido{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 190px; /* Posición en el eje x */
+    left: 185px; /* Posición en el eje x */
     top: 390px; /* Posición en el eje y */
 }
+
 /* Estilos para el campo de correo electrónico */
 .email{
     position: absolute; /* Establece la posición absoluta en la imagen */
@@ -53,7 +55,7 @@ body {
 /* Estilos para el campo de contraseña */
 .contraseña{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 190px; /* Posición en el eje x */
+    left: 185px; /* Posición en el eje x */
     top: 628px; /* Posición en el eje y */
 }
 /* Estilos generales para los campos de entrada */
@@ -65,35 +67,35 @@ body {
 .inputNombre{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 175px; /* Posición en el eje x */
-    top: 353px; /* Posición en el eje y */
+    top: 0px; /* Posición en el eje y */
     font-size: 28px;
 }
 /* Estilos específicos para el campo de apellido */
 .inputApellido{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 175px; /* Posición en el eje x */
-    top: 466px; /* Posición en el eje y */
+    top: 0px; /* Posición en el eje y */
     font-size: 28px;
 }
 /* Estilos específicos para el campo de correo electrónico */
 .inputEmail{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 175px; /* Posición en el eje x */
-    top: 586px; /* Posición en el eje y */
+    top: 0px; /* Posición en el eje y */
     font-size: 28px;
 }
 /* Estilos específicos para el campo de contraseña */
 .inputContraseña{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 175px; /* Posición en el eje x */
-    top: 704px; /* Posición en el eje y */
+    top: 0x; /* Posición en el eje y */
     font-size: 28px;
 }
 /* Estilos para el botón de crear cuenta */
 .botonCrear{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 344px; /* Posición en el eje x */
-    top: 844px; /* Posición en el eje y */
+    top: 744px; /* Posición en el eje y */
     width: 250px;
     height: 63px;
     background-color: white;
