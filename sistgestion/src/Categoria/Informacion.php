@@ -19,7 +19,7 @@ class Informacion
                 'descripcion' => 'Visualizar informacion',
             ],
             3 => [
-              'id' => 2,
+            'id' => 2,
                 'nombre' => 'Agregar',
                 'descripcion' => 'Agregar un nuevo perfil',
             ]];

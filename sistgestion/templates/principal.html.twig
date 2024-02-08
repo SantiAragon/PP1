@@ -8,7 +8,6 @@
           <a href="{{ path('princ') }}">
           <div class="imagen1">
               <img src="images/SanNicolas.png" width="250" height="50">
-            
             </a>
             <a href="{{ path('usuario') }}">
             <div class="icono1">
@@ -38,22 +37,23 @@
               </defs>
               </svg>
             </div>
+
           </div>
-      </div> 
- {% endblock %}
+      </div>
+  {% endblock %}
       <div class="categoria">
-         {% for categoria in categorias %}
-              <a href="{{ path('stockp') }}"> 
+        {% for categoria in categorias %}
+              <a href="{{ path('stockp') }}">
                 <div class="categ-cont">
-               {% if categoria.id == 0 %}
-               <img src="images/stock1.png">
+              {% if categoria.id == 0 %}
+              <img src="images/stock1.png">
                 <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M85.5833 21.7917L79.7917 14.7917C78.6667 13.375 76.9583 12.5 75 12.5H25C23.0417 12.5 21.3333 13.375 20.1667 14.7917L14.4167 21.7917C13.2083 23.2083 12.5 25.0833 12.5 27.0833V79.1667C12.5 83.75 16.25 87.5 20.8333 87.5H79.1667C83.75 87.5 87.5 83.75 87.5 79.1667V27.0833C87.5 25.0833 86.7917 23.2083 85.5833 21.7917ZM50 72.9167L27.0833 50H41.6667V41.6667H58.3333V50H72.9167L50 72.9167ZM21.3333 20.8333L24.7083 16.6667H74.7083L78.625 20.8333H21.3333Z" fill="#0000FF"/>
                 </svg>
                 <h2 class="nombre-stock">{{ categoria.nombre }}</h2>
                 <p>{{ categoria.descripcion }}</p>
               {% endif %}
-              </a> 
+              </a>
               <a href="{{ path('informacion') }}">
               {% if categoria.id == 1 %}
               <img src="images/informacion.png">

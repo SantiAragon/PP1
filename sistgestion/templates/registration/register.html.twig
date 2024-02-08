@@ -1,0 +1,54 @@
+
+
+
+{% block stylesheets %}
+     <!-- Enlace a la hoja de estilos personalizada -->
+    <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/stylesRegistro.css">
+{% endblock %}
+
+{% block body %}
+    <div class="div-general">
+        <!-- Div para la imagen -->
+        <div class="div-imagen">
+            <img src="images/telefono-movil.png" >
+        </div>
+        <!-- Div para el formulario de registro -->
+        <div class="div-registro">
+            <!-- Logo y enlace para volver a la página de inicio de sesión -->
+            <img src="images/SanNicolas.png" >
+            <a href="{{ path('login') }}">
+                <!-- Flecha de retroceso -->
+                <div class="flecha-volver">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="72" height="72" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M5 12l14 0" />
+                    <path d="M5 12l6 6" />
+                    <path d="M5 12l6 -6" />
+                    </svg>
+                </div>
+            </a>
+    <div class="formulario">
+    <!-- Títulos y campos del formulario -->
+    <p class="titulo">
+    Crear Cuenta
+    </p>
+    {{ form_errors(registrationForm) }}
+
+    {{ form_start(registrationForm) }}
+        <div class="titulo nombre">
+        {{ form_row(registrationForm.nombre, {'attr': {'class': 'inputNombre inputDatos','placeholder': 'Ingresa tu nombre'}}) }}
+        </div>
+        <div class="titulo apellido">
+        {{ form_row(registrationForm.apellido, {'attr': {'class': 'inputApellido inputDatos','placeholder': 'Ingresa tu apellido'}}) }}
+        </div>
+        <div class="titulo email">
+        {{ form_row(registrationForm.email, {'attr': {'class': 'inputEmail inputDatos','placeholder': 'Ingresa tu email'}}) }}
+        </div>
+        <div class="titulo contraseña">
+        {{ form_row(registrationForm.plainPassword, {'label': 'Contraseña','attr': {'class': 'inputContraseña inputDatos','placeholder': 'Ingresa tu contraseña'}}) }}
+        </div>
+        <button class="botonCrear"type="submit" class="btn">Registrarse</button>
+        
+    {{ form_end(registrationForm) }}
+    </div>
+{% endblock %}

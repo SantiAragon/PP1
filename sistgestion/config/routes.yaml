@@ -1,15 +1,24 @@
 login:
     path: /
-    controller: App\Controller\LoginController::mostrarLogin
+    controller: App\Controller\SecurityController::login
 
+
+
+logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
 
 stockp:
     path: /stockp
     controller: App\Controller\StockController::mostrarStock
-    
+
 princ:
     path: /princ
-    controller: App\Controller\GestionController::listarCategorias    
+    controller: App\Controller\GestionController::listarCategorias
+
+listarCategorias:
+    path: /princ
+    controller: App\Controller\GestionController::listarCategorias
 
 registro:
     path: /registro
@@ -26,3 +35,15 @@ usuario:
 informacion:
     path: /informacion
     controller: App\Controller\InformacionController::mostrarPerfiles
+
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+
+app_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+
+stock_p:
+    path: /stockp
+    controller: App\Controller\StockController::mostrarStock

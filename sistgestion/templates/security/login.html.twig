@@ -1,0 +1,37 @@
+{% block stylesheets %}
+    <!-- Enlace a la hoja de estilos personalizada para el formulario de inicio de sesión -->
+    <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/stylesLogin.css">
+{% endblock %}
+{% block body %}
+    <!-- Contenedor principal -->
+    <div class="div-general">
+        <!-- Div para la imagen en la parte izquierda -->
+        <div class="div-imagen" >
+            <img src="images/LoginImagen.png" >
+        </div>
+        <!-- Div para el formulario de inicio de sesión en la parte derecha -->
+        <div class="div-login">
+            <!-- Logo en la parte superior del formulario -->
+            <img src="images/SanNicolas.png" >
+            <!-- Título del formulario -->
+            <p class="titulo">
+                Bienvenido de vuelta
+            </p>
+
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <form method="post">
+    <label for="email" class="titulo email">Correo electrónico:</label>
+    <input class="inputEmail inputDatos" type="email" id="email" name="_username" value="{{ last_username }}" required autofocus>
+
+    <label for="password" class="titulo contraseña">Contraseña:</label>
+    <input class="inputContraseña inputDatos" type="password" id="password" name="_password" required>
+
+    <button class="botonIniciar" type="submit">Iniciar sesión</button>
+
+    <p class="linkCrearCuenta"><a href="{{ path('app_register') }}">¿Todavia no tienes una cuenta? Crea una ahora</a></p>
+</form>
+
+{% endblock %}

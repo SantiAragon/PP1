@@ -55,8 +55,16 @@ body {
 /* Estilos para el campo de contraseña */
 .contraseña{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 185px; /* Posición en el eje x */
+    left: 160px; /* Posición en el eje x */
     top: 628px; /* Posición en el eje y */
+    font-size: 30px;
+}
+
+.terminos {
+    position: absolute;
+    left: 185px;
+    top: 800px;
+    font-size: 26px;
 }
 /* Estilos generales para los campos de entrada */
 .inputDatos{
@@ -88,8 +96,19 @@ body {
 .inputContraseña{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 175px; /* Posición en el eje x */
-    top: 0x; /* Posición en el eje y */
+    top: 0px; /* Posición en el eje y */
     font-size: 28px;
+}
+
+.casilla-terminos {
+    position: absolute;
+    left: 175px;
+    top: 0px;
+    font-size: 30px;
+}
+
+.formulario {
+    position: relative;
 }
 /* Estilos para el botón de crear cuenta */
 .botonCrear{
@@ -112,3 +131,4 @@ a {
     right: 110rem;
     top: 2rem;
 }
+
