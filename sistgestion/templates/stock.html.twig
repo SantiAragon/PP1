@@ -28,70 +28,22 @@
     
     <div class="lista-stock">
        <table class="ancho_tabla">
-        <tr>
-        <th>Código</th>
-        <th>Línea</th>
-        <th>Nombre</th>
-        <th>Cantidad</th>
-        <th>Metros</th>
-            </tr>
             <tr>
-                    <td ></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <th>Código</th>
+                <th>Línea</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Metros</th>
             </tr>
+            {% for perfil in perfiles %}
             <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <td>{{ perfil.getPerfil().getCodigo() }}</td>
+                <td>{{ perfil.getPerfil().getLinea() }}</td>
+                <td>{{ perfil.getPerfil().getNombre() }}</td>
+                <td>{{ perfil.getPerfil().getCantidad() }}</td>
+                <td>{{ perfil.getPerfil().getMetros() }}</td>
             </tr>
-            <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-            </tr>
-            <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-            </tr>
-            <tr>
-                    <td ></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-            </tr>
-            <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-            </tr>
-            <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-            </tr>
-            <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-            </tr>
-
+            {% endfor %}
        </table>
     </div>
 </body>

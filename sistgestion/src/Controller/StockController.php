@@ -16,7 +16,21 @@ class StockController extends AbstractController
     /**
      * @Route("/stockp", name="stock_p")
      */
-    public function mostrarStock() {
-        return $this->render('stock.html.twig');
+    public function mostrarStock(): Response
+    {
+        $perfiles = null;
+        // Obtén el usuario actual
+        $usuario = $this->getUser();
+        if ($usuario !== null) {
+            // Obtiene los perfiles del usuario
+            $perfiles = $usuario->getUsuarioPerfiles();
+            // Haz algo con los perfiles...
+        } else {
+            // Manejo del caso en que $usuario es null
+        }
+
+        return $this->render('stock.html.twig', [
+            'perfiles' => $perfiles,
+        ]);
     }
 }

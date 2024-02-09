@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\UsuarioPerfil;
+use App\Entity\UserPerfil;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<UsuarioPerfil>
+ * @extends ServiceEntityRepository<UserPerfil>
  *
- * @method UsuarioPerfil|null find($id, $lockMode = null, $lockVersion = null)
- * @method UsuarioPerfil|null findOneBy(array $criteria, array $orderBy = null)
- * @method UsuarioPerfil[]    findAll()
- * @method UsuarioPerfil[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method UserPerfil|null find($id, $lockMode = null, $lockVersion = null)
+ * @method UserPerfil|null findOneBy(array $criteria, array $orderBy = null)
+ * @method UserPerfil[]    findAll()
+ * @method UserPerfil[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class UsuarioPerfilRepository extends ServiceEntityRepository
+class UserPerfilRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, UsuarioPerfil::class);
+        parent::__construct($registry, UserPerfil::class);
     }
 
 //    /**
-//     * @return UsuarioPerfil[] Returns an array of UsuarioPerfil objects
+//     * @return UserPerfil[] Returns an array of UserPerfil objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class UsuarioPerfilRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?UsuarioPerfil
+//    public function findOneBySomeField($value): ?UserPerfil
 //    {
 //        return $this->createQueryBuilder('u')
 //            ->andWhere('u.exampleField = :val')

@@ -426,3 +426,20 @@ a {
     top: 1px;
 }
 
+/* Agrega estilos para el mensaje de confirmación */
+.mensaje-confirmacion {
+    display: none; /* Lo ocultamos por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.mensaje-confirmacion.hidden {
+    display: none; /* Asegúrate de que esté oculto inicialmente */
+}

@@ -2,11 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\UserRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
@@ -34,6 +36,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(length: 50)]
     private ?string $apellido = null;
+
+    #[ORM\OneToMany(mappedBy: 'usuario', targetEntity: UserPerfil::class, orphanRemoval: true, cascade: ["persist"])]
+    private Collection $UsuarioPerfiles;
+
+    #[ORM\OneToMany(mappedBy: 'usuario', targetEntity: UserPerfil::class, orphanRemoval: true, cascade: ["persist"])]
+    private Collection $perfiles;
+
+    public function __construct()
+    {
+        $this->perfiles = new ArrayCollection();
+        $this->UsuarioPerfiles = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -104,26 +118,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    /**
-     * Returning a salt is only needed, if you are not using a modern
-     * hashing algorithm (e.g. bcrypt or sodium) in your security.yaml.
-     *
-     * @see UserInterface
-     */
-    public function getSalt(): ?string
-    {
-        return null;
-    }
-
-    /**
-     * @see UserInterface
-     */
-    public function eraseCredentials(): void
-    {
-        // If you store any temporary, sensitive data on the user, clear it here
-        // $this->plainPassword = null;
-    }
-
     public function getNombre(): ?string
     {
         return $this->nombre;
@@ -147,4 +141,59 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+
+    public function getUsuarioPerfiles(): Collection
+    {
+        return $this->UsuarioPerfiles;
+    }
+
+    public function setUsuarioPerfiles(?UserPerfil $UsuarioPerfiles): static
+    {
+        $this->UsuarioPerfiles = $UsuarioPerfiles;
+
+        return $this;
+    }
+
+    public function addPerfil(UserPerfil $perfil): static
+    {
+        if (!$this->perfiles->contains($perfil)) {
+            $this->perfiles[] = $perfil;
+            $perfil->setUsuario($this);
+        }
+
+        return $this;
+    }
+
+public function removePerfil(UserPerfil $perfil): self
+{
+    if ($this->perfiles->removeElement($perfil)) {
+        // set the owning side to null (unless already changed)
+        if ($perfil->getUsuario() === $this) {
+            $perfil->setUsuario(null);
+        }
+    }
+
+    return $this;
+}
+
+    /**
+     * Returning a salt is only needed, if you are not using a modern
+     * hashing algorithm (e.g. bcrypt or sodium) in your security.yaml.
+     *
+     * @see UserInterface
+     */
+    public function getSalt(): ?string
+    {
+        return null;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials(): void
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
+    }
+
 }

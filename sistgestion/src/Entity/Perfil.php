@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PerfilRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: PerfilRepository::class)]
@@ -27,6 +29,14 @@ class Perfil
 
     #[ORM\Column]
     private ?int $metros = null;
+
+    #[ORM\OneToMany(mappedBy: 'perfil', targetEntity: UserPerfil::class, orphanRemoval: true)]
+    private Collection $usuarioPerfiles;
+
+    public function __construct()
+    {
+        $this->usuarioPerfiles = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -89,6 +99,36 @@ class Perfil
     public function setMetros(int $metros): static
     {
         $this->metros = $metros;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, UserPerfil>
+     */
+    public function getUsuarioPerfiles(): Collection
+    {
+        return $this->usuarioPerfiles;
+    }
+
+    public function addUsuarioPerfile(UserPerfil $usuarioPerfile): static
+    {
+        if (!$this->usuarioPerfiles->contains($usuarioPerfile)) {
+            $this->usuarioPerfiles->add($usuarioPerfile);
+            $usuarioPerfile->setPerfil($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUsuarioPerfile(UserPerfil $usuarioPerfile): static
+    {
+        if ($this->usuarioPerfiles->removeElement($usuarioPerfile)) {
+            // set the owning side to null (unless already changed)
+            if ($usuarioPerfile->getPerfil() === $this) {
+                $usuarioPerfile->setPerfil(null);
+            }
+        }
 
         return $this;
     }
