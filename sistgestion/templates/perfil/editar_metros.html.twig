@@ -1,0 +1,38 @@
+{% extends 'principal.html.twig' %}
+
+{% block content %}
+    {% block header %}
+        {{ parent() }} {# Esto incluirá el contenido original del bloque header de principal.twig #}
+    {% endblock %}
+ 
+    <body class="fondo-blanco">
+        {{ form_start(form) }}
+    {{ form_row(form.metros, {'label': 'Nuevos metros'}) }}
+    <button type="submit">Guardar cambios</button>
+{{ form_end(form) }}
+
+        <div class="perfil-container">
+            {% if perfiles is defined and perfiles is not empty %}
+                {% for perfil in perfiles %}
+                    <div class="perfil">
+                    <a href="{{ path('perfil_editar', {'id': perfil.id}) }}">Editar metros</a>
+                        <div class="texto_img">
+                            <img src="images/informacion_logo.png">
+                            <p class="p-informacion">Informacion</p>
+                        </div>
+                        
+                        <div class="p-informacion">
+                            <div class="p-informaciones">
+                            <p class="p-codigo"><strong>Código:</strong> <span class="resultado">{{ perfil.codigo }}</span></p>
+                            <p class="p-nombre"><strong>Nombre:</strong> <span class="resultado">{{ perfil.nombre }}</span></p>
+                            <p class="p-linea"><strong>Línea:</strong> <span class="resultado">{{ perfil.linea }}</span></p>
+                            <p class="p-cantidad"><strong>Cantidad:</strong><span class="resultado"> {{ perfil.cantidad }}</span></p>
+                            <p class="p-metros"><strong>Metros:</strong> <span class="resultado">{{ perfil.metros }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </body>
+{% endblock %}

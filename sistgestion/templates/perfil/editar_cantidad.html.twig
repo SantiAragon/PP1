@@ -1,0 +1,12 @@
+
+
+{% block title %}Editar Cantidad{% endblock %}
+
+{% block body %}
+    <h1>Editar Cantidad</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.cantidad) }}
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    {{ form_end(form) }}
+{% endblock %}

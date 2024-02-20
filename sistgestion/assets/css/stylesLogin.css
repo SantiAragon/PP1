@@ -89,3 +89,10 @@ body {
 .botonIniciar a {
     text-decoration: none;
 }
+
+.error-login {
+    position: absolute;
+    top: 47rem;
+    left: 12rem;
+    color: red;
+}

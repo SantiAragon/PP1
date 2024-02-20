@@ -18,13 +18,13 @@ class SecurityController extends AbstractController
     {
         // obtener el error de inicio de sesión si existe
         $error = $authenticationUtils->getLastAuthenticationError();
+        $errorMessage = $error ? 'Email o contraseña incorrectos.' : null;
 
-        // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
         return $this->render('security/login.html.twig', [
             'last_username' => $lastUsername,
-            'error' => $error,
+            'error' => $errorMessage,
         ]);
     }
 

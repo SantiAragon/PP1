@@ -1,0 +1,36 @@
+{# templates/perfil/editar_perfil.html.twig #}
+{% extends 'principal.html.twig' %}
+{% block content %}
+    {% block header %}
+        {{ parent() }} {# Esto incluirá el contenido original del bloque header de principal.twig #}
+    {% endblock %}
+ <body class="fondo-blanco">
+
+
+    {% block body %}
+        <div class="contenedor_editar2">
+            <img src="images/lapiz.png" alt="Editar" class="editar-icono2">
+            <span class="editar-texto2">Editar</span>
+        </div>
+        <p class="datos_editar">Codigo: {{ perfil.codigo }}</p>
+        <p class="datos_editar">Nombre: {{ perfil.nombre }}</p>
+        <p class="datos_editar">Línea: {{ perfil.linea }}</p>
+        <div class="contenedor_img2">
+            <img src="{{ perfil.imagen }}" alt="Imagen de perfil" class="imagen_perfil2">
+        </div>
+        {{ form_start(form) }}
+            <div class="datos_editar ed_met">
+               {{ form_row(form.metros, {'attr': {'class': 'input-grande'}}) }}
+            </div>
+            <div class="datos_editar ed_cant">
+                {{ form_row(form.cantidad, {'attr': {'class': 'input-grande'}}) }}
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button class="btn btn-secondary"><a href="{{ path('buscar_perfil') }}" >Cancelar</a></button>
+        {{ form_end(form) }}
+        
+
+         
+
+    {% endblock %}
+{% endblock %}

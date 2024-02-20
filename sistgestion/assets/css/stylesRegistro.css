@@ -42,20 +42,20 @@ body {
 /* Estilos para el campo de apellido */
 .apellido{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 185px; /* Posición en el eje x */
+    left: 195px; /* Posición en el eje x */
     top: 390px; /* Posición en el eje y */
 }
 
 /* Estilos para el campo de correo electrónico */
 .email{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 190px; /* Posición en el eje x */
+    left: 170px; /* Posición en el eje x */
     top: 510px; /* Posición en el eje y */
 }
 /* Estilos para el campo de contraseña */
 .contraseña{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 160px; /* Posición en el eje x */
+    left: 205px; /* Posición en el eje x */
     top: 628px; /* Posición en el eje y */
     font-size: 30px;
 }
@@ -74,28 +74,28 @@ body {
 /* Estilos específicos para el campo de nombre */
 .inputNombre{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 175px; /* Posición en el eje x */
+    left: 205px; /* Posición en el eje x */
     top: 0px; /* Posición en el eje y */
     font-size: 28px;
 }
 /* Estilos específicos para el campo de apellido */
 .inputApellido{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 175px; /* Posición en el eje x */
+    left: 200px; /* Posición en el eje x */
     top: 0px; /* Posición en el eje y */
     font-size: 28px;
 }
 /* Estilos específicos para el campo de correo electrónico */
 .inputEmail{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 175px; /* Posición en el eje x */
+    left: 225px; /* Posición en el eje x */
     top: 0px; /* Posición en el eje y */
     font-size: 28px;
 }
 /* Estilos específicos para el campo de contraseña */
 .inputContraseña{
     position: absolute; /* Establece la posición absoluta en la imagen */
-    left: 175px; /* Posición en el eje x */
+    left: 190px; /* Posición en el eje x */
     top: 0px; /* Posición en el eje y */
     font-size: 28px;
 }
@@ -114,7 +114,7 @@ body {
 .botonCrear{
     position: absolute; /* Establece la posición absoluta en la imagen */
     left: 344px; /* Posición en el eje x */
-    top: 744px; /* Posición en el eje y */
+    top: 764px; /* Posición en el eje y */
     width: 250px;
     height: 63px;
     background-color: white;
@@ -131,4 +131,34 @@ a {
     right: 110rem;
     top: 2rem;
 }
+.invalid-feedback {
+    color: red; /* Color rojo para resaltar el mensaje de error */
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+    margin-top: 10px; /* Espacio superior para separar el mensaje del campo */
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+    left: 15rem;
+    bottom: 2px;
+}
 
+.invalid-feedback ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.invalid-feedback li {
+    display: inline;
+    text-align: justify;
+
+}
+
+/* Estilo para los campos de entrada con errores */
+.input-con-error {
+    border-color: red; /* Cambia el borde del campo a rojo cuando hay un error */
+}
+
+.campo-formulario {
+    margin-bottom: 5rem; /* Ajusta el espacio entre cada campo */
+    width: 190px; /* Establece un ancho mínimo para los campos */
+}

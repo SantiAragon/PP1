@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/styles.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 {% endblock %}
 {% block content %}
   {% block header %}
@@ -36,6 +36,15 @@
               </clipPath>
               </defs>
               </svg>
+
+              {% if app.user %}
+                <div class="usuario-info">
+                    <div class="nombre-apellido">
+                    <span class="nombre-usuario-aut">{{ app.user.nombre }}</span>
+                    <span class="apellido-usuario-aut">{{ app.user.apellido }}</span>
+                    </div>
+                </div>
+    {% endif %}
             </div>
 
           </div>
@@ -54,7 +63,7 @@
                 <p>{{ categoria.descripcion }}</p>
               {% endif %}
               </a>
-              <a href="{{ path('informacion') }}">
+              <a href="{{ path('buscar_perfil') }}">
               {% if categoria.id == 1 %}
               <img src="images/informacion.png">
                 <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">

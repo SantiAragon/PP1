@@ -1,11 +1,10 @@
 {% extends 'principal.html.twig' %}
 {% block stylesheets %}
     <!-- Enlace a la hoja de estilos personalizada para el formulario de inicio de sesión -->
-    <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/stylesAgregar.css">
+    <link rel="stylesheet" href="http://localhost/PP1/SISTGESTION/assets/css/stylesUsuario.css">
 {% endblock %}
 {% block content %}
   {% block header %}
-    {# Tu contenido adicional para el bloque header #}
     {{ parent() }} {# Esto incluirá el contenido original del bloque header de principal.twig #}
  {% endblock %}
     <h2 class="nombre-usuario titulo_n_position"> Usuario </h2>
@@ -27,38 +26,163 @@
                 </clipPath>
                 </defs>
             </svg>
+            {% if app.user %}
+                <div class="usuario-info1">
+                    <div class="nombre-apellido">
+                    <span class="nombre-usuario-aut1">{{ app.user.nombre }}</span>
+                    <span class="apellido-usuario-aut1">{{ app.user.apellido }}</span>
+                    </div>
+                </div>
+                
+                <div class="usuario-info-email1">
+                    <span class="email-usuario-aut">{{ app.user.email }}</span>
+                </div>
+            {% endif %}
             <button><a href="{{ path('logout') }}"> Cerrar Sesión </button>
         </div>
 
-            <nav class="opciones-usuario-cont">
-                <ul>
-                    <li>
-                        <div>
-                            <img src="images/contrasena.svg">
-                            <a href="#"> Contraseña </a>
-                            <img src="images/flecha-select.svg">
+        <nav class="opciones-usuario-cont">
+            <ul>
+                <li>
+                    <div >
+                        <img class="imagen-password" src="images/contrasena.svg">
+                        <a class="titulo-contr"> Contraseña </a>
+                        <div id="cambio-contrasena-form-container">
+                            <form action="{{ path('cambiar_contrasena') }}" method="post">
+                    <div>
+                <li>
+            <ul>
+            <div class="actual-contr">
+            <label for="current_password">Contraseña Actual:</label>
+            </div>
+            <div class="inputActualContr">
+            <input type="password" id="current_password" name="current_password" required>
+            </div>
+            {% if error_mensaje_password is defined %}
+               <div class="mensaje-error-password">{{ error_mensaje_password }}</div>
+            {% endif %}
+        </>
+        
+        <div>
+            <div class="nueva-contr">
+                <label for="new_password">Nueva Contraseña:</label>
+            </div>
+            <div class="inputNuevaContr">
+            <input type="password" id="new_password" name="new_password" required>
+            </div>
+            {% if error_mensaje_password1 is defined %}
+               <div class="mensaje-error-password">{{ error_mensaje_password1 }}</div>
+            {% endif %}
+            {% if mensaje_password is defined %}
+                <div class="mensaje-exito-password">{{ mensaje_password }}</div>
+            {% endif %}
+        </div>
+        <button class="boton-cambiar-contr" type="submit">Cambiar Contraseña</button>
+    </form>
+                <li>
+                    <div>
+                        <img class="imagen-correo" src="images/email.svg">
+                        <a class="titulo-email"> Email </a>
+                        <div id="cambio-email-form-container">
+                            
+                            <form action="{{ path('cambiar_email') }}" method="post">
+                                <div class="nuevo-email">
+                                    <label for="new_email">Nuevo Email:</label>
+                                </div>
+                                <div class="inputNuevoEmail">
+                                <input type="email" id="new_email" name="new_email" required>
+                                </div>
+                                {% if mensaje_error_email is defined %}
+                                    <div class="mensaje-error-email">{{ mensaje_error_email }}</div>
+                                {% endif %}
+                                {% if mensaje_email is defined %}
+                                    <div class="mensaje-exito-email">{{ mensaje_email }}</div>
+                                {% endif %}
+                                <button class="boton-cambiar-email" type="submit">Cambiar Email</button>
+                            </form>
                         </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img class="imagen-usuario" src="images/nombre-usuario.svg">
+                        <a class="titulo-usuario"> Cambiar nombre de usuario </a>
+                        <div id="cambio-nombre-form-container">
+    <form id="cambio-nombre-form" action="{{ path('cambiar_nombre_usuario') }}" method="post">
+        <div>
+            <div class="nuevo-usuario-nombre">
+            <label for="new_nombre">Nuevo Nombre:</label>
+            </div>
+            <div class="inputNuevoUsuarioNombre">
+            <input type="text" id="new_nombre" name="new_nombre" required>
+            </div>
+        </div>
+        <div>
+            <div class="nuevo-usuario-apellido">
+            <label for="new_apellido">Nuevo Apellido:</label>
+            </div>
+            <div class="inputNuevoUsuarioApellido">
+            <input type="text" id="new_apellido" name="new_apellido" required>
+            </div>
+            
+        </div>
+        {% if error_mensaje_apellido is defined %}
+               <div class="mensaje-error-nombre-usuario">{{ error_mensaje_apellido }}</div>
+            {% endif %}
+            {% if error_mensaje_nombre is defined %}
+               <div class="mensaje-error-nombre-usuario">{{ error_mensaje_nombre }}</div>
+            {% endif %}
+            {% if mensaje_nombre_usuario is defined %}
+               <div class="mensaje-exito-nombre-usuario">{{ mensaje_nombre_usuario }}</div>
+            {% endif %}
 
-                        <ul>
-                            <li>
-                                <a href="#"> Estoy dentro </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="images/email.svg">
-                            <a href="#"> Email </a>
-                            <img src="images/flecha-select.svg">
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src="images/nombre-usuario.svg">
-                            <a href="#"> Cambiar nombre de usuario </a>
-                            <img src="images/flecha-select.svg">
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+        <!-- Botón para enviar el formulario -->
+        <button class="boton-cambiar-nombre-usuario" type="submit">Cambiar Nombre de Usuario</button>
+    </form>
+</div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Manejador de evento para el formulario de cambio de contraseña
+                document.getElementById('cambio-contrasena-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    var currentPassword = document.getElementById('current_password').value;
+                    var newPassword = document.getElementById('new_password').value;
+                    enviarDatos('{{ path('cambiar_contrasena') }}', 'current_password=' + encodeURIComponent(currentPassword) + '&new_password=' + encodeURIComponent(newPassword));
+                });
+
+                // Manejador de evento para el formulario de cambio de email
+                document.getElementById('cambio-email-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    var newEmail = document.getElementById('new_email').value;
+                    enviarDatos('/cambiar-email', 'new_email=' + encodeURIComponent(newEmail));
+                });
+
+                document.getElementById('cambio-nombre-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    var newNombre = document.getElementById('new_nombre').value;
+                    var newApellido = document.getElementById('new_apellido').value;
+                    enviarDatos('{{ path('cambiar_nombre_usuario') }}', 'new_nombre=' + encodeURIComponent(newNombre) + '&new_apellido=' + encodeURIComponent(newApellido));
+                });
+
+                // Función para enviar los datos al servidor
+                function enviarDatos(url, data) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', url, true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onload = function() {
+                        if (xhr.status === 200) {
+                            alert(xhr.responseText);
+                        } else {
+                            alert('Error al procesar la solicitud. Inténtalo de nuevo.');
+                        }
+                    };
+                    xhr.send(data);
+                }
+            });
+        </script>
 {% endblock %}

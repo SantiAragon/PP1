@@ -24,7 +24,6 @@ class StockController extends AbstractController
         if ($usuario !== null) {
             // Obtiene los perfiles del usuario
             $perfiles = $usuario->getUsuarioPerfiles();
-            // Haz algo con los perfiles...
         } else {
             // Manejo del caso en que $usuario es null
         }

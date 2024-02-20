@@ -18,7 +18,6 @@
         });
     </script>
   {% block header %}
-    {# Tu contenido adicional para el bloque header #}
     {{ parent() }} {# Esto incluirá el contenido original del bloque header de principal.twig #}
  {% endblock %}
  <body class="fondo-blanco">
@@ -45,9 +44,6 @@
       <img class="imgformkit imgMetro" src="images/formkit_add.png" >
       <p class="pformAgregar pMetro">Metros:</p>
       <input class="inputMetro inputDatos" type="number" id="metrosInput" name="metros" placeholder="Ingrese los metros">
-    
-      <img class="imgformkit imgfoto" src="images/fotoimagen.png" >
-      <p class="pformAgregar pfoto">Imagen:</p>
       
       <button class="botonGuardar" type="submit">Guardar</button>
       <div id="mensaje-confirmacion" class="mensaje-confirmacion hidden">

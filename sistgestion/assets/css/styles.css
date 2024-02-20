@@ -221,7 +221,8 @@ a {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    width: 76.5%;
+    width: 77.9%;
+    height: 40%;
     border: solid;
 }
 
@@ -246,7 +247,7 @@ a {
     left: 188px;
     font-weight: bold;
     font-size: 38px;
-    font-family: 'murecho', sans-serif; /* Reemplaza 'murecho' con el nombre de tu fuente si es diferente */
+    font-family: 'murecho', sans-serif; 
     color: red;
 }
 .imgformkit{
@@ -257,7 +258,7 @@ a {
 .pformAgregar{
     font-weight: bold;
     font-size: 28px;
-    font-family: 'murecho', sans-serif; /* Reemplaza 'murecho' con el nombre de tu fuente si es diferente */
+    font-family: 'murecho', sans-serif;
 }
 /* Modificaciones correspondientes al las opciones de codigo */
 .pCodigo{
@@ -371,6 +372,16 @@ a {
 /* ================================================================================================================ */
 /* ================================================================================================================ */
 /* Espacio correspondiente al HTML Informacion */
+.perfil-container {
+    width: 100%;
+}
+
+.perfil {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
 .form-control-busqueda{
     position: absolute;
     top: 236px;
@@ -387,48 +398,172 @@ a {
     background:none;
     border: none;
 }
+.texto_img{
+    position: absolute;
+    top: 290px;
+    left: 73px;
+}
+.texto_img img,
+.texto_img p {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFA500;
+}
 
 .p-informacion{
      font-weight: bold;
      font-size: 28px;
-     font-family: 'murecho', sans-serif; /* Reemplaza 'murecho' con el nombre de la fuente que estás utilizando o desea usar */
+     font-family: 'murecho', sans-serif;
+     margin-top: 20px;
+     
+}
+.p-informaciones{
+    margin-top: 285px;
+}
+.p-informacion p {
+    margin-bottom: 10px;
+    margin-left: 372px;
+    
 }
 
-.p-codigo{
-    position: absolute;
-    top: 447px;
-    left: 372px;
-
-}
-.p-nombre{
-    position: absolute;
-    top: 501px;
-    left: 372px;
-}
-.p-linea{
-    position: absolute;
-    top: 542px;
-    left: 372px;
-}
-.p-cantidad{
-    position: absolute;
-    top: 583px;
-    left: 372px; 
-}
-.p-metros{
-    position: absolute;
-    top: 624px;
-    left: 372px;
+.contenedor_editar {
+    display: inline-block;
+    border-radius: 15px;
+    padding: 5px;
+    width: 149px; /* Ancho del div */
+    height: 39px; /* Alto del div */
+    border: 2px solid; 
+    margin-left: 372px;
+    margin-top:50px;
 }
 
-.nombre-usuario-aut{
-    position: absolute;
-    top: 1px;
+.editar-icono {
+    width: 30px;
+    height: 30px;
 }
+
+.editar-texto {
+    font-size: 28px;
+    font-weight: bold;
+    color: #008000;
+    margin-left: 5px; /* Espacio entre la imagen y el texto */
+}
+
+.contenedor_img{
+    border: 2px solid black;
+    border-radius: 30px;
+    height: 200px;
+    width: 200px;
+    margin-top: -250px;
+    margin-left: 70px;
+}
+
+.imagen_perfil {
+   padding-top:40px;
+   padding-left:20px;
+    width:180px;
+    height:105px;
+}
+
+/* Fin del espacio correspondiente al HTML informacion */
+/* ================================================================================================================ */
+/* ================================================================================================================ */
+/* Espacio correspondiente al HTML editar_informacion */
+.editar-icono2 {
+    width: 30px;
+    height: 30px;
+}
+
+.editar-texto2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #008000;
+    margin-left: 5px; /* Espacio entre la imagen y el texto */
+    font-family: 'murecho', sans-serif;
+}
+
+.contenedor_editar2 {
+    display: inline-block;
+    margin-top: 90px;
+    padding: 5px;
+    width: 149px; /* Ancho del div */
+    height: 39px; /* Alto del div */
+    
+    margin-left: 72px;
+}
+
+.datos_editar{
+    margin-left: 372px;
+    font-family: 'murecho', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.btn-primary{
+    margin-left: 372px;
+    height: 36px;
+    width: 176px;
+    border-radius: 5px;
+    background-color: #2A49FF;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.btn-secondary{
+    height: 36px;
+    width: 176px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    left: 580px;
+    font-size: 28px;
+}
+.ed_met{
+    margin-bottom: 20px;
+    margin-top:-60px;
+}
+.ed_cant{
+    margin-bottom: 20px;
+}
+
+.input-grande{
+    height: 28px;
+    font-size: 16px;
+}
+
+.contenedor_img2{
+    border: 2px solid black;
+    border-radius: 30px;
+    height: 200px;
+    width: 200px;
+    margin-top: -150px;
+    margin-left: 70px;
+}
+.imagen_perfil2 {
+   padding-top:40px;
+   padding-left:20px;
+    width:180px;
+    height:105px;
+}
+
+.mensaje_error_perfil {
+    position: absolute;
+    top: 20rem;
+    left: 29rem;
+    color: red;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fin del espacio correspondiente al HTML editar_informacion */
+/* ================================================================================================================ */
+
 
 /* Agrega estilos para el mensaje de confirmación */
 .mensaje-confirmacion {
-    display: none; /* Lo ocultamos por defecto */
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -441,5 +576,262 @@ a {
 }
 
 .mensaje-confirmacion.hidden {
-    display: none; /* Asegúrate de que esté oculto inicialmente */
+    display: none; 
+}
+
+
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    left: 80px;
+}
+
+.nombre-apellido {
+    display: flex;
+    justify-content: space-between;
+}
+
+.usuario-info1 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 7px;
+    left: 120px; 
+}
+
+.usuario-info-email1 {
+    position: absolute;
+    top: 70px;
+    left: 120px; 
+}
+
+.nombre-usuario-aut1,
+.apellido-usuario-aut1 {
+    font-size: 35px; 
+}
+
+.apellido-usuario-aut1 {
+    margin-left: 5px; 
+}
+
+.email-usuario-aut {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+/* Estilos para la pantalla principal */
+.nombre-usuario-aut,
+.apellido-usuario-aut {
+    font-size: 25px; 
+}
+
+.apellido-usuario-aut {
+    margin-left: 5px; 
+}
+
+.actual-contr{
+    margin-top: 1rem;
+}
+
+.nuevo-email{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    position: absolute;
+    top: 17rem;
+    left: 5rem;
+}
+
+.actual-contr label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    position: absolute;
+    top: 4rem;
+    padding: 0;
+    
+}
+
+.nueva-contr label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    position: absolute;
+    top: 8rem;
+    padding: 0;
+    
+}
+
+.nuevo-usuario-nombre label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    position: absolute;
+    top: 4rem;
+    left: 53rem;
+    
+}
+
+.nuevo-usuario-apellido label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    position: absolute;
+    top: 8rem;
+    left: 53rem;
+    
+}
+
+.titulo-contr {
+    position: absolute;
+    top: 25px;
+    left: 5.5rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.titulo-email {
+    position: absolute;
+    top: 233px;
+    left: 5.5rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.titulo-usuario {
+    position: absolute;
+    top: 1.7rem;
+    left: 53rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.inputActualContr input{
+    width: 340px;
+    position: absolute;
+    top: 5.5rem;
+}
+
+.inputNuevaContr input{
+    width: 340px;
+    position: absolute;
+    top: 9.5rem;
+}
+
+.inputNuevoEmail input{
+    width: 340px;
+    position: absolute;
+    top: 18.5rem;
+    left: 5rem;
+}
+
+.inputNuevoUsuarioNombre input{
+    width: 340px;
+    position: absolute;
+    top: 5.5rem;
+    left: 53rem;
+}
+
+.inputNuevoUsuarioApellido input{
+    width: 340px;
+    position: absolute;
+    top: 9.5rem;
+    left: 53rem;
+}
+
+.boton-cambiar-contr {
+    margin-top: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border-radius: 1rem 1rem 1rem 1rem;
+    border: solid thin;
+}
+
+.boton-cambiar-email {
+    margin-top: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border-radius: 1rem 1rem 1rem 1rem;
+    border: solid thin;
+    position: absolute;
+    top: 18rem;
+    left: 5rem;
+}
+
+.boton-cambiar-nombre-usuario {
+    margin-top: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border-radius: 1rem 1rem 1rem 1rem;
+    border: solid thin;
+    position: absolute;
+    top: 10rem;
+    left: 57.7rem;
+}
+
+.imagen-password {
+    position: absolute;
+    left: 2.5rem;
+    top: 1rem;
+}
+
+.imagen-correo {
+    position: absolute;
+    left: 2.5rem;
+    top: 14rem;
+}
+
+.imagen-usuario {
+    position: absolute;
+    left: 50rem;
+    top: 1.3rem;
+}
+
+.mensaje-error-password {
+    position: absolute;
+    top: 1.8rem;
+    left: 13rem;
+    color: red;
+}
+
+.mensaje-exito-password {
+    position: absolute;
+    top: 1.8rem;
+    left: 13rem;
+    color: green;
+}
+
+.mensaje-error-email {
+    position: absolute;
+    top: 14.8rem;
+    left: 9.5rem;
+    color: red;
+}
+.mensaje-exito-email {
+    position: absolute;
+    top: 14.8rem;
+    left: 9.5rem;
+    color: green;
+}
+
+.mensaje-error-nombre-usuario {
+    position: absolute;
+    top: 14.5rem;
+    left: 54rem;
+    color: red;
+}
+
+.mensaje-exito-nombre-usuario {
+    position: absolute;
+    top: 14.5rem;
+    left: 55.5rem;
+    color: green;
 }

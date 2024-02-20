@@ -1,0 +1,54 @@
+{% extends 'principal.html.twig' %}
+
+{% block content %}
+    {% block header %}
+        {{ parent() }} {# Esto incluirá el contenido original del bloque header de principal.twig #}
+    {% endblock %}
+ 
+    <body class="fondo-blanco">
+        {{ form_start(form) }}
+            {{ form_row(form.codigo, {'label': false, 'attr': {'class': 'form-control-busqueda', 'style': 'font-size: 16px; text-align: center;'}}) }}
+            <button class="img-buscador-informacion" type="submit"><img src="images/lupa.png" ></button>
+        {{ form_end(form) }}
+
+        {% if mensaje_error_perfil1 is defined %}
+            <div class="mensaje_error_perfil">{{ mensaje_error_perfil1 }}</div>
+        {% endif %}
+
+        {% if mensaje_error_perfil is defined %}
+            <div class="mensaje_error_perfil">{{ mensaje_error_perfil }}</div>
+        {% endif %}
+
+        <div class="perfil-container">
+            {% if perfiles is defined and perfiles is not empty %}
+                {% for perfil in perfiles %}
+                    <div class="perfil">
+                        <div class="texto_img">
+                            <img src="images/informacion_logo.png">
+                            <p class="p-informacion">Informacion</p>
+                        </div>
+                        
+                        <div class="p-informacion">
+                            <div class="p-informaciones">
+                                <p ><strong>Código:</strong> <span class="resultado">{{ perfil.codigo }}</span></p>
+                                <p ><strong>Nombre:</strong> <span class="resultado">{{ perfil.nombre }}</span></p>
+                                <p ><strong>Línea:</strong> <span class="resultado">{{ perfil.linea }}</span></p>
+                                <p ><strong>Cantidad:</strong><span class="resultado"> {{ perfil.cantidad }}</span></p>
+                                <p ><strong>Metros:</strong> <span class="resultado">{{ perfil.metros }}</span></p>
+                                <div class="contenedor_img">
+                                    <img src="{{ perfil.imagen }}" alt="Imagen de perfil" class="imagen_perfil">
+                                 </div>
+                            </div>
+                            <a href="{{ path('perfil_editar', {'id': perfil.id}) }}">
+                                <div class="contenedor_editar">
+                                <img src="images/lapiz.png" alt="Editar" class="editar-icono">
+                                <span class="editar-texto">Editar</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </body>
+{% endblock %}

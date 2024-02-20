@@ -32,21 +32,44 @@
     <p class="titulo">
     Crear Cuenta
     </p>
-    {{ form_errors(registrationForm) }}
-
     {{ form_start(registrationForm) }}
-        <div class="titulo nombre">
-        {{ form_row(registrationForm.nombre, {'attr': {'class': 'inputNombre inputDatos','placeholder': 'Ingresa tu nombre'}}) }}
+        <div class="titulo nombre campo-formulario">
+        {{ form_label(registrationForm.nombre, 'Nombre') }}
+        {{ form_widget(registrationForm.nombre, {'attr': {'class': 'inputNombre inputDatos', 'placeholder': 'Ingresa tu nombre'}}) }}
+        <div class="invalid-feedback">
+            {{ form_errors(registrationForm.nombre) }}
         </div>
-        <div class="titulo apellido">
-        {{ form_row(registrationForm.apellido, {'attr': {'class': 'inputApellido inputDatos','placeholder': 'Ingresa tu apellido'}}) }}
         </div>
-        <div class="titulo email">
-        {{ form_row(registrationForm.email, {'attr': {'class': 'inputEmail inputDatos','placeholder': 'Ingresa tu email'}}) }}
+    <div class="titulo apellido campo-formulario">
+    {{ form_label(registrationForm.apellido, 'Apellido') }}
+    {{ form_widget(registrationForm.apellido, {'attr': {'class': 'inputApellido inputDatos', 'placeholder': 'Ingresa tu apellido'}}) }}
+    <div class="invalid-feedback">
+            {{ form_errors(registrationForm.apellido) }}
         </div>
-        <div class="titulo contraseña">
-        {{ form_row(registrationForm.plainPassword, {'label': 'Contraseña','attr': {'class': 'inputContraseña inputDatos','placeholder': 'Ingresa tu contraseña'}}) }}
+    </div>
+    <div class="titulo email campo-formulario">
+    {{ form_label(registrationForm.email, 'Email') }}
+    {{ form_widget(registrationForm.email, {'attr': {'class': 'inputEmail inputDatos', 'placeholder': 'Ingresa tu email'}}) }}
+    <div class="invalid-feedback">
+            {{ form_errors(registrationForm.email) }}
         </div>
+    </div>
+    <div class="titulo contraseña campo-formulario">
+    {{ form_label(registrationForm.plainPassword, 'Contraseña') }}
+    {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'inputContraseña inputDatos', 'placeholder': 'Ingresa tu contraseña'}}) }}
+    <div class="invalid-feedback">
+            {{ form_errors(registrationForm.plainPassword) }}
+        </div>
+    </div>
+    
+    <div class="flash-messages">
+        {% for flashMessage in app.flashes('error') %}
+            <div class="alert alert-danger" role="alert">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+    </div>
+    </div>
         <button class="botonCrear"type="submit" class="btn">Registrarse</button>
         
     {{ form_end(registrationForm) }}

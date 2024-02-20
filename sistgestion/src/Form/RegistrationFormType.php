@@ -21,24 +21,50 @@ class RegistrationFormType extends AbstractType
             ->add('email')
 
             ->add('plainPassword', PasswordType::class, [
-                // instead of being set onto the object directly,
-                // this is read and encoded in the controller
+                'error_bubbling' => false, // Esta opción permite que los errores se envíen al formulario principal
                 'mapped' => false,
                 'attr' => ['autocomplete' => 'new-password'],
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Please enter a password',
+                        'message' => 'Por favor, ingresa una contraseña',
                     ]),
                     new Length([
                         'min' => 6,
-                        'minMessage' => 'Your password should be at least {{ limit }} characters',
-                        // max length allowed by Symfony for security reasons
+                        'minMessage' => 'Tu contraseña debe tener {{ limit }} o mas caracteres',
                         'max' => 4096,
                     ]),
                 ],
             ])
-            ->add('nombre', TextType::class)
-            ->add('apellido', TextType::class);
+            ->add('nombre', TextType::class, [
+                'error_bubbling' => false, // Esta opción permite que los errores se envíen al formulario principal
+                'constraints' => [
+                new NotBlank([
+                    'message' => 'Por favor, ingresa un nombre',
+                ]),
+                new Length([
+                    'min' => 3,
+                    'max' => 10,
+                    'minMessage' => 'Tu nombre debe tener {{ limit }} o mas caracteres',
+                    'maxMessage' => 'Tu nombre debe tener {{ limit }} o menos caracteres',
+                ]),
+            ],
+            ])
+            
+            ->add('apellido', TextType::class, [
+                'error_bubbling' => false, // Esta opción permite que los errores se envíen al formulario principal
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Por favor, ingresa un apellido',
+                    ]),
+                    new Length([
+                        'min' => 3,
+                        'max' => 10,
+                        'minMessage' => 'Tu apellido debe tener {{ limit }} o mas caracteres',
+                        'maxMessage' => 'Tu apellido debe tener {{ limit }} o menos caracteres',
+                    ]),
+                ],
+            ])
+            ;
         ;
     }
 

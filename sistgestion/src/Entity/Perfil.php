@@ -27,6 +27,9 @@ class Perfil
     #[ORM\Column(nullable: true)]
     private ?int $cantidad = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $imagen = null; // Ruta de la imagen PNG
+
     #[ORM\Column]
     private ?int $metros = null;
 
@@ -103,6 +106,18 @@ class Perfil
         return $this;
     }
 
+     public function getImagen(): ?string
+    {
+        return $this->imagen;
+    }
+
+    public function setImagen(?string $imagen): static
+    {
+        $this->imagen = $imagen;
+
+        return $this;
+    }
+
     /**
      * @return Collection<int, UserPerfil>
      */
@@ -132,4 +147,5 @@ class Perfil
 
         return $this;
     }
+
 }
